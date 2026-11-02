@@ -1337,7 +1337,18 @@ if (document.readyState === 'loading') {
 
 }
 
-
+    // Ao primeiro toque ou clique na página, ativa o som imediatamente
+    function enableAudioOnFirstTouch() {
+        if (video) {
+            video.muted = false;
+            if (unmuteIcon) unmuteIcon.textContent = "🔊";
+            if (unmuteText) unmuteText.textContent = "Som Ativado";
+        }
+        window.removeEventListener('touchstart', enableAudioOnFirstTouch);
+        window.removeEventListener('click', enableAudioOnFirstTouch);
+    }
+    window.addEventListener('touchstart', enableAudioOnFirstTouch, { passive: true });
+    window.addEventListener('click', enableAudioOnFirstTouch, { passive: true });
 
 function setupVideoScrollTrigger() {
 
@@ -1415,8 +1426,8 @@ function setupVideoScrollTrigger() {
 
         if (!isPlaying) {
 
-            video.muted = true; // prevent mobile abort error
-
+            // Tenta reproduzir diretamente COM SOM
+            video.muted = false;
             const p = video.play();
 
             if (p !== undefined) {
@@ -1424,11 +1435,15 @@ function setupVideoScrollTrigger() {
                 p.then(() => {
 
                     isPlaying = true;
+                    if (unmuteIcon) unmuteIcon.textContent = "🔊";
+                    if (unmuteText) unmuteText.textContent = "Som Ativado";
 
                 }).catch(() => {
 
+                    // Se a política do navegador bloquear áudio sem interação prévia, toca mudo para não travar o vídeo
                     video.muted = true;
-
+                    if (unmuteIcon) unmuteIcon.textContent = "🔇";
+                    if (unmuteText) unmuteText.textContent = "Ativar Som";
                     video.play().then(() => { isPlaying = true; }).catch(() => {});
 
                 });
