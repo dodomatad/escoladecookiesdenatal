@@ -1002,11 +1002,6 @@ def generate_principal_html():
           <p class="text-[10px] sm:text-xs font-bold text-stone-400 uppercase tracking-wider mt-1">Área de Membros • Plano Básico</p>
         </div>
       </div>
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button onclick="openUpgradeModal()" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-600 to-[#E15A4F] hover:opacity-90 text-white text-[11px] sm:text-xs font-extrabold px-3 py-1.5 rounded-full shadow-md transition-all">
-          <span>👑</span> Desbloquear VIP
-        </button>
-      </div>
     </div>
   </header>
 
