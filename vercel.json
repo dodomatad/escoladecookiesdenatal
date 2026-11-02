@@ -4,11 +4,11 @@
   "rewrites": [
     { "source": "/principal", "destination": "/principal.html" },
     { "source": "/completo", "destination": "/completo.html" },
-    { "source": "/membros", "destination": "/completo.html" }
+    { "source": "/membros", "destination": "/membros.html" }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/(principal|completo|membros|obrigado|gdrive_folder)",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" }
       ]
