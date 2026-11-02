@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Área de Membros - Produto Principal | Escola de Cookies</title>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Área de Membros | Escola de Cookies & Confeitaria</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,15 +19,16 @@
           colors: {
             brand: {
               cream: '#FAF7F2',
-              card: '#FFF7F5',
-              border: '#E8DFD5',
+              card: '#191211',
+              cardHover: '#231816',
+              border: '#2A1F1D',
               primary: '#E15A4F',
               primaryHover: '#C9473C',
               pink: '#DB2777',
               pinkHover: '#BE185D',
+              amber: '#D97706',
               green: '#16A34A',
-              greenHover: '#15803D',
-              dark: '#2D1F1A',
+              dark: '#0F0A0A',
             }
           }
         }
@@ -36,250 +38,512 @@
   <style>
     body { font-family: 'Montserrat', sans-serif; background-color: #0F0A0A; color: #F5EFEB; scroll-behavior: smooth; }
     .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-    .card-hover:hover { transform: translateY(-4px); border-color: rgba(225, 90, 79, 0.4); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(225, 90, 79, 0.15); }
+    .card-hover:hover { transform: translateY(-4px); border-color: rgba(225, 90, 79, 0.5); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 0 25px rgba(225, 90, 79, 0.2); }
+    .module-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
+    .module-card:hover { transform: translateY(-5px); }
+    .module-card.active-module { border-color: #E15A4F; box-shadow: 0 0 25px rgba(225, 90, 79, 0.4); background: linear-gradient(180deg, #261614 0%, #191211 100%); }
+    .fade-in-content { animation: fadeIn 0.35s ease-out forwards; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-pulse { animation: pulseBtn 2s infinite; }
+    @keyframes pulseBtn {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+      50% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
+    }
+    .custom-scrollbar::-webkit-scrollbar { height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #191211; border-radius: 9999px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #E15A4F; border-radius: 9999px; }
   </style>
 </head>
 <body class="min-h-screen flex flex-col bg-[#0F0A0A] text-stone-100">
 
+  <!-- TOP BAR NOTIFICAÇÃO -->
+  <div class="bg-gradient-to-r from-stone-900 via-stone-800 to-stone-900 border-b border-stone-800 py-2 px-4 text-center text-xs font-semibold text-stone-300">
+    🍪 Bem-vinda! Seu Plano Básico de Cookies está liberado. <button onclick="openUpgradeModal()" class="text-[#E15A4F] hover:underline font-extrabold ml-1">Clique aqui para desbloquear os outros módulos VIP com desconto especial</button>
+  </div>
+
   <!-- HEADER -->
-  <header class="bg-[#1A1110]/95 backdrop-blur border-b border-stone-800 sticky top-0 z-50 shadow-lg">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+  <header class="bg-[#1A1110]/95 backdrop-blur border-b border-stone-800 sticky top-0 z-50 shadow-xl">
+    <div class="max-w-6xl mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <span class="text-3xl">🍪</span>
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#E15A4F] to-amber-700 flex items-center justify-center text-2xl shadow-md shadow-[#E15A4F]/20">
+          🍪
+        </div>
         <div>
-          <h1 class="text-xl sm:text-2xl font-black text-[#E15A4F] tracking-tight">ESCOLA DE COOKIES & CONFEITARIA</h1>
-          <p class="text-xs font-semibold text-[#D4A373] uppercase tracking-wider">Área de Membros • Produto Principal (Cookies & Delivery)</p>
+          <h1 class="text-base sm:text-xl font-black text-[#E15A4F] tracking-tight leading-none">ESCOLA DE COOKIES & CONFEITARIA</h1>
+          <p class="text-[10px] sm:text-xs font-bold text-stone-400 uppercase tracking-wider mt-1">Área de Membros • Plano Básico</p>
         </div>
       </div>
-      <div class="hidden sm:flex items-center gap-3">
-        <span class="text-xs font-bold text-[#E15A4F]">Formação em Cookies & Delivery</span>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="openUpgradeModal()" class="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-600 to-[#E15A4F] hover:opacity-90 text-white text-[11px] sm:text-xs font-extrabold px-3 py-1.5 rounded-full shadow-md transition-all">
+          <span>👑</span> Desbloquear VIP
+        </button>
       </div>
     </div>
   </header>
 
   <!-- BANNER DE BOAS-VINDAS -->
-    <!-- BANNER CURSO DE CONFEITARIA -->
   <section class="max-w-6xl mx-auto px-4 pt-6 pb-2">
-    <div class="w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-amber-500/20 shadow-2xl bg-[#1A0505]">
+    <div class="w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-amber-500/20 bg-[#1A0505]">
       <img src="banner_confeitaria.jpg" alt="Curso de Confeitaria - Do Básico ao Profissional" class="w-full h-auto object-cover block" loading="eager" fetchpriority="high">
     </div>
   </section>
 
-<main class="max-w-6xl mx-auto px-4 py-12 flex-1 w-full space-y-16">
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full space-y-10">
 
-    <!-- SEÇÃO 1: COOKIES & IFOOD -->
-    <section id="cookies" class="scroll-mt-24">
-      <div class="flex items-center justify-between mb-8 pb-4 border-b border-stone-800">
+    <!-- SELETOR DE MÓDULOS (LMS HUB) -->
+    <section id="modulos-hub" class="scroll-mt-24">
+      <div class="text-center sm:text-left mb-6 pb-3 border-b border-stone-800 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
         <div>
-          <div class="inline-flex items-center gap-2 bg-[#E15A4F]/10 text-[#E15A4F] font-bold text-xs uppercase px-3 py-1 rounded-full mb-2">
-            <span>🍪</span> Formação Principal
-          </div>
-          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Módulo 1: Escola de Cookies & Delivery iFood</h3>
-          <p class="text-sm sm:text-base text-stone-500 mt-1">Apostilas de receitas, manuais de venda no delivery e planilha de precificação</p>
+          <span class="inline-flex items-center gap-1.5 bg-[#E15A4F]/10 text-[#E15A4F] border border-[#E15A4F]/20 font-bold text-xs uppercase px-3 py-1 rounded-full mb-2">
+            🎓 Plataforma de Aulas & Apostilas
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white">Escolha o Módulo para Estudar</h2>
+          <p class="text-sm text-stone-400 mt-1">Seu plano inclui o Módulo 1 completo. Os módulos VIP podem ser liberados a qualquer momento:</p>
         </div>
-        <span class="bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 font-extrabold text-xs sm:text-sm px-3.5 py-1.5 rounded-full hidden md:inline-block">
-          8 Materiais Liberados
-        </span>
+        <div class="text-xs text-stone-400 font-semibold bg-stone-900/80 px-3 py-2 rounded-lg border border-stone-800">
+          🍪 <strong class="text-white">8 Materiais</strong> Liberados no seu Plano
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- GRID DOS 4 MÓDULOS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
 
-        <!-- Item 1: Especialista em Cookies -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 via-amber-600/10 to-amber-950/40 border border-amber-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(245,158,11,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🍪</span>
+        <!-- CARD MÓDULO 1 (LIBERADO) -->
+        <div onclick="selectModule(1)" id="btn-card-mod-1" class="module-card active-module bg-[#191211] rounded-2xl p-4 border border-stone-800 flex flex-col justify-between group">
+          <div>
+            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80">
+              <img src="carrossel_cookies_recheados.jpg" alt="Cookies & Delivery iFood" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-2 left-2 bg-[#E15A4F] text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md shadow-md">
+                Módulo 1
+              </span>
+              <span class="absolute bottom-2 right-2 bg-black/80 backdrop-blur-sm text-stone-200 text-[10px] font-bold px-2 py-0.5 rounded border border-white/10">
+                8 Materiais
+              </span>
             </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-[#E15A4F]">Curso Principal</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Especialista em Cookies</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Guia completo para dominar a arte dos cookies com texturas perfeitas e receitas altamente lucrativas.</p>
-            </div>
+            <h3 class="text-base font-bold text-white group-hover:text-[#E15A4F] transition-colors leading-snug">
+              Cookies Lucrativos & Delivery iFood
+            </h3>
+            <p class="text-xs text-stone-400 mt-1.5 line-clamp-2 leading-relaxed">
+              Receitas campeãs americanas, validade, fotografia e delivery passo a passo no iFood.
+            </p>
           </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📄 Apostila (13,3 MB)</span>
-            <a href="materiais/especialista-em-cookies.pdf" download="especialista-em-cookies.pdf" class="inline-flex items-center gap-1.5 bg-[#E15A4F] hover:bg-[#C9473C] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
+          <div class="mt-4 pt-3 border-t border-stone-800/80 flex items-center justify-between">
+            <span class="text-[11px] font-bold text-[#E15A4F] flex items-center gap-1">
+              <span>● Liberado</span>
+            </span>
+            <span class="text-xs font-extrabold text-white bg-[#E15A4F] px-3 py-1.5 rounded-lg shadow-sm group-hover:bg-[#C9473C] transition-colors">
+              Ver Aulas →
+            </span>
           </div>
         </div>
 
-        <!-- Item 2: Manual do iFood Lucrativo -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500/20 via-red-600/10 to-red-950/40 border border-red-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(234,29,44,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🛵</span>
+        <!-- CARD MÓDULO 2 (BLOQUEADO) -->
+        <div onclick="openUpgradeModal('Sobremesas Lucrativas & Brownies')" id="btn-card-mod-2" class="module-card bg-[#140E0E] rounded-2xl p-4 border border-stone-800/60 flex flex-col justify-between group opacity-85 hover:opacity-100">
+          <div>
+            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80">
+              <img src="carrossel_brownies_gourmet.jpg" alt="Sobremesas & Brownies" class="w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <span class="bg-black/80 backdrop-blur text-amber-400 border border-amber-500/40 text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
+                  🔒 VIP Exclusivo
+                </span>
+              </div>
             </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-[#EA1D2C]">Delivery & Vendas</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Manual do iFood Lucrativo</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Tire o máximo proveito do iFood, posicione seus cookies no topo e fidelize clientes todos os dias.</p>
-            </div>
+            <h3 class="text-base font-bold text-stone-300 group-hover:text-[#DB2777] transition-colors leading-snug">
+              Sobremesas Gourmet & Brownies
+            </h3>
+            <p class="text-xs text-stone-400 mt-1.5 line-clamp-2 leading-relaxed">
+              Brownies com casquinha crocante, Copos da Felicidade e Tortas Mousse aeradas.
+            </p>
           </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📄 Manual (29,8 MB)</span>
-            <a href="materiais/manual-ifood-lucrativo.pdf" download="manual-ifood-lucrativo.pdf" class="inline-flex items-center gap-1.5 bg-[#EA1D2C] hover:bg-[#c41521] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Item 3: Cookies para Delivery -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 via-emerald-600/10 to-emerald-950/40 border border-emerald-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(22,163,74,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">📦</span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-[#16A34A]">Receitas Especiais</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Cookies para Delivery</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Receitas, massas e técnicas de conservação desenvolvidas para manter crocância e qualidade na entrega.</p>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📄 Apostila (46,9 MB)</span>
-            <a href="materiais/cookies-para-delivery.pdf" download="cookies-para-delivery.pdf" class="inline-flex items-center gap-1.5 bg-[#16A34A] hover:bg-[#15803D] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
+          <div class="mt-4 pt-3 border-t border-stone-800/80 flex items-center justify-between">
+            <span class="text-[11px] font-bold text-amber-400 flex items-center gap-1">
+              <span>🔒 Bloqueado</span>
+            </span>
+            <span class="text-xs font-extrabold text-amber-400 bg-amber-950/60 border border-amber-500/30 px-3 py-1.5 rounded-lg group-hover:bg-amber-600 group-hover:text-white transition-colors">
+              Desbloquear →
+            </span>
           </div>
         </div>
 
-        <!-- Item 4: Masterclass Cookies -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500/20 via-rose-600/10 to-rose-950/40 border border-rose-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(225,29,72,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">⭐</span>
+        <!-- CARD MÓDULO 3 (BLOQUEADO) -->
+        <div onclick="openUpgradeModal('Brigadeiros Gourmet, Cupcakes & Macarons')" id="btn-card-mod-3" class="module-card bg-[#140E0E] rounded-2xl p-4 border border-stone-800/60 flex flex-col justify-between group opacity-85 hover:opacity-100">
+          <div>
+            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80">
+              <img src="carrossel_brigadeiros_gourmet.jpg" alt="Doces Finos" class="w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <span class="bg-black/80 backdrop-blur text-amber-400 border border-amber-500/40 text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
+                  🔒 VIP Exclusivo
+                </span>
+              </div>
             </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Apostila Exclusiva</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Apostila Masterclass Cookies</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Material completo com segredos profissionais de modelagem, sabores refinados e congelamento.</p>
-            </div>
+            <h3 class="text-base font-bold text-stone-300 group-hover:text-amber-500 transition-colors leading-snug">
+              Brigadeiros, Cupcakes & Macarons
+            </h3>
+            <p class="text-xs text-stone-400 mt-1.5 line-clamp-2 leading-relaxed">
+              60 receitas nobres de brigadeiros de vitrine, cupcakes fofos e macarons franceses.
+            </p>
           </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📄 Apostila (11,6 MB)</span>
-            <a href="materiais/apostila-masterclass-cookies.pdf" download="apostila-masterclass-cookies.pdf" class="inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Item 5: Cookies Tradicionais -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-600/25 via-orange-600/15 to-amber-950/40 border border-amber-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(249,115,22,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🍪</span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-orange-400">Receitas Clássicas</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Cookies Tradicionais</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">As receitas clássicas e consagradas que mais vendem, simples e rápidas de preparar.</p>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📄 Livro de Receitas (11,1 MB)</span>
-            <a href="materiais/cookies-tradicionais-receitas-classicas.pdf" download="cookies-tradicionais-receitas-classicas.pdf" class="inline-flex items-center gap-1.5 bg-orange-600 hover:bg-orange-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
+          <div class="mt-4 pt-3 border-t border-stone-800/80 flex items-center justify-between">
+            <span class="text-[11px] font-bold text-amber-400 flex items-center gap-1">
+              <span>🔒 Bloqueado</span>
+            </span>
+            <span class="text-xs font-extrabold text-amber-400 bg-amber-950/60 border border-amber-500/30 px-3 py-1.5 rounded-lg group-hover:bg-amber-600 group-hover:text-white transition-colors">
+              Desbloquear →
+            </span>
           </div>
         </div>
 
-        <!-- Item 6: Guia de Precificação -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 via-blue-600/10 to-blue-950/40 border border-blue-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">💰</span>
+        <!-- CARD MÓDULO 4 (BLOQUEADO) -->
+        <div onclick="openUpgradeModal('Salgados Comerciais & Panificação')" id="btn-card-mod-4" class="module-card bg-[#140E0E] rounded-2xl p-4 border border-stone-800/60 flex flex-col justify-between group opacity-85 hover:opacity-100">
+          <div>
+            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80 bg-stone-900 flex items-center justify-center">
+              <div class="text-center p-2 opacity-50">
+                <span class="text-4xl">🥐</span>
+              </div>
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <span class="bg-black/80 backdrop-blur text-amber-400 border border-amber-500/40 text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
+                  🔒 VIP Exclusivo
+                </span>
+              </div>
             </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Gestão & Finanças</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Guia de Precificação Profissional</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Aprenda a calcular custos fixos, insumos, margem de lucro e taxas para precificar com segurança.</p>
-            </div>
+            <h3 class="text-base font-bold text-stone-300 group-hover:text-emerald-400 transition-colors leading-snug">
+              Salgados Comerciais & Panificação
+            </h3>
+            <p class="text-xs text-stone-400 mt-1.5 line-clamp-2 leading-relaxed">
+              Top 10 Salgados assados, empadão de confeitaria e o Livro de Ouro da Panificação.
+            </p>
           </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📄 Guia (572 KB)</span>
-            <a href="materiais/guia-de-precificacao-profissional.pdf" download="guia-de-precificacao-profissional.pdf" class="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Item 7: Planilha de Precificação -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-teal-950/40 border border-teal-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(20,184,166,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">📊</span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Ferramenta Automática</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Planilha de Precificação</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Ferramenta prática e automatizada para calcular o preço exato de cada receita e garantir seu lucro.</p>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📊 Planilha & Material (27 KB)</span>
-            <a href="materiais/planilha-de-precificacao.pdf" download="planilha-de-precificacao.pdf" class="inline-flex items-center gap-1.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Item 8: Estratégias Avançadas iFood -->
-        <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 via-purple-600/10 to-purple-950/40 border border-purple-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(168,85,247,0.25)] relative group overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🚀</span>
-            </div>
-            <div class="flex-1 min-w-0">
-              <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Apostila Completa Delivery</span>
-              <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Estratégias Avançadas iFood</h4>
-              <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Guia completo e aprofundado para alavancar pedidos diários e transformar sua loja em referência.</p>
-            </div>
-          </div>
-          <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
-            <span class="text-xs font-semibold text-stone-500">📄 Livro Digital (94,8 MB)</span>
-            <a href="materiais/estrategias-avancadas-ifood.pdf" download="estrategias-avancadas-ifood.pdf" class="inline-flex items-center gap-1.5 bg-purple-700 hover:bg-purple-800 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
-              Acessar a aula
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </a>
+          <div class="mt-4 pt-3 border-t border-stone-800/80 flex items-center justify-between">
+            <span class="text-[11px] font-bold text-amber-400 flex items-center gap-1">
+              <span>🔒 Bloqueado</span>
+            </span>
+            <span class="text-xs font-extrabold text-amber-400 bg-amber-950/60 border border-amber-500/30 px-3 py-1.5 rounded-lg group-hover:bg-amber-600 group-hover:text-white transition-colors">
+              Desbloquear →
+            </span>
           </div>
         </div>
 
       </div>
     </section>
 
-    </main>
+    <!-- NAVEGAÇÃO RÁPIDA POR ABAS (STICKY TABS) -->
+    <div id="module-tabs-nav" class="sticky top-[69px] z-40 bg-[#160E0D]/95 backdrop-blur-md py-3 border-y border-stone-800 -mx-4 px-4 shadow-md">
+      <div class="max-w-6xl mx-auto flex items-center justify-start sm:justify-center gap-2 overflow-x-auto custom-scrollbar pb-1">
+        <button onclick="selectModule(1)" id="tab-nav-1" class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#E15A4F] text-white shadow-md shrink-0 transition-all">
+          <span>🍪</span> Módulo 1: Cookies (8)
+        </button>
+        <button onclick="openUpgradeModal('Módulo 2: Sobremesas')" class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#1F1615] text-stone-400 hover:text-amber-400 border border-stone-800 shrink-0 transition-all">
+          <span>🔒</span> Módulo 2: Sobremesas
+        </button>
+        <button onclick="openUpgradeModal('Módulo 3: Doces Finos')" class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#1F1615] text-stone-400 hover:text-amber-400 border border-stone-800 shrink-0 transition-all">
+          <span>🔒</span> Módulo 3: Doces Finos
+        </button>
+        <button onclick="openUpgradeModal('Módulo 4: Salgados')" class="tab-button inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#1F1615] text-stone-400 hover:text-amber-400 border border-stone-800 shrink-0 transition-all">
+          <span>🔒</span> Módulo 4: Salgados
+        </button>
+      </div>
+    </div>
+
+    <!-- ÁREA DE EXIBIÇÃO DE CONTEÚDO DO MÓDULO 1 -->
+    <div id="module-display-area" class="scroll-mt-36">
+
+      <!-- ============================================== -->
+      <!-- CONTEÚDO MÓDULO 1: COOKIES & DELIVERY (8 ITENS) -->
+      <!-- ============================================== -->
+      <section id="content-mod-1" class="module-content-pane fade-in-content">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-4 border-b border-stone-800 gap-3">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-[#E15A4F]/10 text-[#E15A4F] font-bold text-xs uppercase px-3 py-1 rounded-full mb-2 border border-[#E15A4F]/20">
+              <span>🍪</span> Formação Principal
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Módulo 1: Escola de Cookies & Delivery iFood</h3>
+            <p class="text-sm text-stone-400 mt-1">Apostilas de receitas, manuais de venda no delivery e planilha de precificação automatizada</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 font-extrabold text-xs sm:text-sm px-3.5 py-1.5 rounded-full">
+              ✓ 8 Materiais Liberados
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Item 1: Especialista em Cookies -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500/20 via-amber-600/10 to-amber-950/40 border border-amber-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(245,158,11,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🍪</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#E15A4F]">Curso Principal</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Especialista em Cookies</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Domine as massas perfeitas, técnicas de ponto, recheios irresistíveis e o padrão profissional que vende todo dia.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila Oficial (1,2 MB)</span>
+              <a href="materiais/especialista-em-cookies.pdf" download="especialista-em-cookies.pdf" class="inline-flex items-center gap-1.5 bg-[#E15A4F] hover:bg-[#C9473C] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2: Manual do iFood Lucrativo -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500/20 via-red-600/10 to-red-950/40 border border-red-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(239,68,68,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🛵</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#EA1D2C]">Guia Oficial iFood</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Manual do iFood Lucrativo</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Como cadastrar seu cardápio, criar combos magnéticos e posicionar sua loja no topo do aplicativo na sua região.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Manual Digital (3,4 MB)</span>
+              <a href="materiais/manual-ifood-lucrativo.pdf" download="manual-ifood-lucrativo.pdf" class="inline-flex items-center gap-1.5 bg-[#EA1D2C] hover:bg-[#c41521] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3: Cookies para Delivery -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 via-emerald-600/10 to-emerald-950/40 border border-emerald-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">📦</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Operação & Embalagem</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Cookies para Delivery</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Técnicas de conservação, transporte seguro sem quebrar o cookie e embalagens térmicas que encantam o cliente.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila Técnica (1,4 MB)</span>
+              <a href="materiais/cookies-para-delivery.pdf" download="cookies-para-delivery.pdf" class="inline-flex items-center gap-1.5 bg-[#16A34A] hover:bg-[#15803D] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 4: Masterclass Cookies -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500/20 via-rose-600/10 to-rose-950/40 border border-rose-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(244,63,94,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">⭐</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Conteúdo Avançado</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Apostila Masterclass Cookies</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Segredos de textura, crocância por fora e maciez por dentro que diferenciam seu produto da concorrência comum.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Masterclass (2,5 MB)</span>
+              <a href="materiais/apostila-masterclass-cookies.pdf" download="apostila-masterclass-cookies.pdf" class="inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 5: Cookies Tradicionais -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-600/20 via-orange-600/10 to-amber-950/40 border border-amber-600/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(245,158,11,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🧁</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange-400">Receitas Clássicas</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Cookies Tradicionais & Clássicos</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">As fórmulas consagradas que não saem de moda: gotas de chocolate meio amargo, baunilha clássica e red velvet.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Livro de Receitas (6,2 MB)</span>
+              <a href="materiais/cookies-tradicionais-receitas-classicas.pdf" download="cookies-tradicionais-receitas-classicas.pdf" class="inline-flex items-center gap-1.5 bg-orange-600 hover:bg-orange-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 6: Guia de Precificação Profissional -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 via-blue-600/10 to-blue-950/40 border border-blue-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">💰</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Gestão & Finanças</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Guia de Precificação Profissional</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Aprenda a calcular custos fixos, variáveis, taxas de entrega e sua margem de lucro real para nunca ter prejuízo.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Guia Financeiro (1,1 MB)</span>
+              <a href="materiais/guia-de-precificacao-profissional.pdf" download="guia-de-precificacao-profissional.pdf" class="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 7: Planilha de Precificação -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-teal-950/40 border border-teal-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(20,184,166,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">📊</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Ferramenta Automática</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Planilha de Precificação</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Ferramenta prática e automatizada para calcular o preço exato de cada receita e garantir seu lucro com 1 clique.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📊 Planilha & Material (27 KB)</span>
+              <a href="materiais/planilha-de-precificacao.pdf" download="planilha-de-precificacao.pdf" class="inline-flex items-center gap-1.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 8: Estratégias Avançadas iFood -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 via-purple-600/10 to-purple-950/40 border border-purple-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(168,85,247,0.25)] relative group overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🚀</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Apostila Completa Delivery</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Estratégias Avançadas iFood</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Guia completo e aprofundado para alavancar pedidos diários e transformar sua loja em referência na cidade.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Livro Digital (94,8 MB)</span>
+              <a href="materiais/estrategias-avancadas-ifood.pdf" download="estrategias-avancadas-ifood.pdf" class="inline-flex items-center gap-1.5 bg-purple-700 hover:bg-purple-800 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BOX UPSELL DE DESBLOQUEIO VIP NO RODAPÉ -->
+        <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#1E1110] via-[#2D1614] to-[#170E0D] border-2 border-amber-500/40 shadow-2xl relative overflow-hidden text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="max-w-xl">
+            <span class="inline-flex items-center gap-1.5 bg-amber-500/20 text-amber-300 font-black text-xs uppercase px-3 py-1 rounded-full mb-3 border border-amber-500/30">
+              👑 Upgrade Recomendado
+            </span>
+            <h4 class="text-xl sm:text-2xl font-black text-white">Desbloqueie os Outros 3 Módulos com 85% OFF</h4>
+            <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+              Leve agora as apostilas completas de <strong>Brownies Gourmet, Copos da Felicidade, Tortas Mousse, 60 Receitas de Brigadeiros, Macarons Franceses e Salgados Nobres</strong>.
+            </p>
+          </div>
+          <div class="shrink-0 text-center">
+            <p class="text-xs text-stone-400 line-through">De R$ 97,00</p>
+            <p class="text-2xl sm:text-3xl font-black text-emerald-400">Por R$ 14,90</p>
+            <p class="text-[10px] text-stone-400 uppercase font-semibold mb-3">Pagamento Único • Acesso Imediato</p>
+            <a href="https://app.mivvo.com.br/checkout/cf9bbf6c-9100-4fb3-9179-b2400e2a8c22" target="_blank" class="btn-pulse inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-900/40 transition-all">
+              DESBLOQUEAR TUDO AGORA ➔
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- MODAL DE UPGRADE VIP -->
+  <div id="upgrade-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-[#1A1110] border-2 border-amber-500/50 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+      <button onclick="closeUpgradeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-white bg-stone-800/80 hover:bg-stone-700 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+        ✕
+      </button>
+
+      <div class="text-center">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-red-600 mx-auto flex items-center justify-center text-3xl shadow-lg shadow-amber-500/20 mb-4">
+          🔒
+        </div>
+        <span class="inline-block bg-amber-500/20 text-amber-400 text-xs font-black uppercase px-3 py-1 rounded-full border border-amber-500/30 mb-2">
+          Conteúdo Exclusivo VIP
+        </span>
+        <h3 id="modal-module-title" class="text-xl sm:text-2xl font-black text-white">
+          Módulo Bloqueado no seu Plano
+        </h3>
+        <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+          Este conteúdo faz parte da nossa <strong>Formação Completa VIP</strong>. Desbloqueie agora com acesso vitalício imediato a:
+        </p>
+
+        <div class="my-5 p-4 rounded-xl bg-stone-900/90 border border-stone-800 text-left space-y-2 text-xs text-stone-200">
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400">✓</span> <span><strong>Módulo 2:</strong> Brownies Gourmet, Copos da Felicidade & Mousses</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400">✓</span> <span><strong>Módulo 3:</strong> 60 Brigadeiros, Cupcakes & Macarons Franceses</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400">✓</span> <span><strong>Módulo 4:</strong> Bônus Salgados Comerciais & Panificação Nobre</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400">✓</span> <span>Planilhas de Precificação e Fichas Técnicas extras</span>
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <p class="text-xs text-stone-400 line-through">Valor normal: R$ 97,00</p>
+          <p class="text-3xl font-black text-emerald-400">R$ 14,90 <span class="text-xs font-medium text-stone-300">(taxa única)</span></p>
+        </div>
+
+        <a href="https://app.mivvo.com.br/checkout/cf9bbf6c-9100-4fb3-9179-b2400e2a8c22" target="_blank" class="btn-pulse block w-full py-4 px-6 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-black text-sm uppercase tracking-wider shadow-lg shadow-emerald-950/60 transition-all">
+          SIM! QUERO LIBERAR MEU ACESSO VIP ➔
+        </a>
+
+        <button onclick="closeUpgradeModal()" class="mt-3 text-xs text-stone-500 hover:text-stone-300 underline">
+          Voltar e continuar estudando Cookies no Módulo 1
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-[#120B0B] border-t border-stone-800 py-8 text-center text-stone-400 text-sm mt-12">
@@ -288,6 +552,48 @@
       <p class="text-xs text-stone-500">Em caso de dúvidas sobre o acesso aos materiais, entre em contato com nosso suporte.</p>
     </div>
   </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function selectModule(modNum) {
+      if (modNum === 1) {
+        const displayArea = document.getElementById('module-display-area');
+        if (displayArea) {
+          const yOffset = -90;
+          const y = displayArea.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      } else {
+        openUpgradeModal();
+      }
+    }
+
+    function openUpgradeModal(moduleName) {
+      const modal = document.getElementById('upgrade-modal');
+      const title = document.getElementById('modal-module-title');
+      if (moduleName && title) {
+        title.innerText = 'Desbloquear ' + moduleName;
+      }
+      if (modal) {
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeUpgradeModal() {
+      const modal = document.getElementById('upgrade-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Fechar modal ao clicar fora
+    window.onclick = function(event) {
+      const modal = document.getElementById('upgrade-modal');
+      if (event.target === modal) {
+        closeUpgradeModal();
+      }
+    }
+  </script>
 
 </body>
 </html>
