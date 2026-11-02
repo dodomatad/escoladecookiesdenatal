@@ -1,0 +1,14 @@
+materiais/
+materiais_salgados/
+materiais_sobremesas/
+brolls_pinterest/
+brolls_pinterest_batch2/
+brolls_video/
+criativos_prontos/
+videos_criativos/
+*.py
+*.bak
+test_*.png
+test_*.jpg
+*.mp3
+test_xfade.mp4
