@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Laboratório de Áudio - Locução Talita (100 Receitas + iFood)</title>
+  <title>Laboratório de Áudio - Locução Talita (10 Cursos pelo Preço de 1)</title>
   <style>
     body {
       font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
@@ -47,6 +47,7 @@
     .track.highlight {
       border-color: #38bdf8;
       background: #0f172a;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
     }
     .track-header {
       display: flex;
@@ -71,9 +72,9 @@
       background: #0284c7;
       color: #ffffff;
     }
-    .badge-kevano {
-      background: #16a34a;
-      color: #ffffff;
+    .badge-previous {
+      background: #475569;
+      color: #cbd5e1;
     }
     .track-text {
       font-size: 13px;
@@ -84,9 +85,6 @@
       border-radius: 8px;
       margin-bottom: 16px;
       border-left: 3px solid #38bdf8;
-    }
-    .track-text.kevano {
-      border-left-color: #22c55e;
     }
     audio {
       width: 100%;
@@ -107,41 +105,38 @@
 </head>
 <body>
   <div class="card">
-    <h1>🎙️ Locução Concluída: Voz Neural da Talita</h1>
-    <p class="subtitle">Motor de Síntese Oficial: <code>pt-BR-ThalitaMultilingualNeural</code> (Edge TTS / Azure Speech)</p>
+    <h1>🎙️ Locução Concluída: Voz da Talita</h1>
+    <p class="subtitle">Motor de Síntese: <code>pt-BR-ThalitaMultilingualNeural</code> (Edge TTS / Azure Speech)</p>
 
     <!-- FAIXA ATUAL GERADA -->
     <div class="track highlight">
       <div class="track-header">
-        <span class="track-title">🔊 Novo Áudio Gerado (100 Receitas + Vendas no iFood)</span>
+        <span class="track-title">🔊 10 Cursos pelo Preço de 1 (Recorte Focado)</span>
         <span class="badge badge-new">Gerado Agora</span>
       </div>
       <div class="track-text">
-        "Você pode transformar sua paixão por confeitaria em uma fonte de renda. Conheça nosso guia exclusivo com mais de 100 receitas de doces gourmet testadas e aprovadas, ideais para quem quer elevar as sobremesas e começar a vender neste fim de ano! Imagine a satisfação de ver seus doces sendo elogiados, compartilhados e procurados por quem prova. Com nosso guia exclusivo, você tem acesso a 10 cursos completos de alta confeitaria pelo preço de 1! Mais de 100 receitas de doces gourmet, ensinando a fazer: Cookies Gourmet, Brownies Gourmet, Copos da Felicidade, Tortas Mousse, Curso de Salgados Fritos e Assados, Curso de Panificação, e Guia exclusivo para elevar suas habilidades com vendas no iFood. Clique em Saiba mais agora e comece a criar doces com potencial de agradar clientes e se destacar na cozinha e nos negócios. Não perca essa oportunidade!"
+        "Com nosso guia exclusivo, você tem acesso a 10 cursos completos de alta confeitaria pelo preço de 1! Mais de 100 receitas de doces gourmet, ensinando a fazer: Cookies Gourmet, Brownies Gourmet, Copos da Felicidade, Tortas Mousse, Curso de Salgados Fritos e Assados, Curso de Panificação, e Guia exclusivo para elevar suas habilidades com vendas no iFood. Você tem acesso a 10 cursos completos de alta confeitaria pelo preço de 1!"
       </div>
       <audio controls autoplay>
+        <source src="narracao_talita_10cursos.mp3" type="audio/mpeg">
+        Seu navegador não suporta reprodução de áudio.
+      </audio>
+    </div>
+
+    <!-- FAIXA COMPLETA ANTERIOR -->
+    <div class="track">
+      <div class="track-header">
+        <span class="track-title" style="color: #94a3b8;">Faixa 2: Versão Completa (Com Introdução e CTA)</span>
+        <span class="badge badge-previous">Versão Anterior</span>
+      </div>
+      <audio controls>
         <source src="audio_talita_confeitaria_ifood.mp3" type="audio/mpeg">
         Seu navegador não suporta reprodução de áudio.
       </audio>
     </div>
 
-    <!-- FAIXA COMPARATIVA KEVANO -->
-    <div class="track">
-      <div class="track-header">
-        <span class="track-title" style="color: #4ade80;">💡 Comparativo: Versão Validada de Alta Conversão (Espinha Dorsal 40s)</span>
-        <span class="badge badge-kevano">Padrão Kevano</span>
-      </div>
-      <div class="track-text kevano">
-        "E se você pudesse botar entre 150 e 300 reais de lucro limpo no bolso todo santo dia, sem arredar o pé da sua cozinha e sem deixar seus filhos com estranhos? Chega de ficar fazendo conta de cabeça no mercado ou ter que pedir dinheiro pro marido até pra comprar um remédio... O cookie custa R$ 2,50 e vende fácil por R$ 15 no iFood ou WhatsApp com o Método da Massa Congelada em 14 minutos!"
-      </div>
-      <audio controls>
-        <source src="narracao_talita_validada_kevano.mp3" type="audio/mpeg">
-        Seu navegador não suporta reprodução de áudio.
-      </audio>
-    </div>
-
     <div class="specs">
-      <span>Arquivo: audio_talita_confeitaria_ifood.mp3</span>
+      <span>Arquivo: narracao_talita_10cursos.mp3</span>
       <span>Base de Conhecimento: Claude-Knowledge (SOP-12)</span>
     </div>
   </div>
