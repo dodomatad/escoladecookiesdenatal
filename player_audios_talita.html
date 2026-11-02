@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratório de Áudio - Locução Talita (100 Receitas + iFood)</title>
+  <style>
+    body {
+      font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      margin: 0;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 760px;
+      width: 100%;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #f1f5f9;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .track {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .track.highlight {
+      border-color: #38bdf8;
+      background: #0f172a;
+    }
+    .track-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .track-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: #38bdf8;
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-new {
+      background: #0284c7;
+      color: #ffffff;
+    }
+    .badge-kevano {
+      background: #16a34a;
+      color: #ffffff;
+    }
+    .track-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      background: rgba(255,255,255,0.03);
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      border-left: 3px solid #38bdf8;
+    }
+    .track-text.kevano {
+      border-left-color: #22c55e;
+    }
+    audio {
+      width: 100%;
+      height: 44px;
+      border-radius: 8px;
+      outline: none;
+    }
+    .specs {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #334155;
+      font-size: 12px;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎙️ Locução Concluída: Voz Neural da Talita</h1>
+    <p class="subtitle">Motor de Síntese Oficial: <code>pt-BR-ThalitaMultilingualNeural</code> (Edge TTS / Azure Speech)</p>
+
+    <!-- FAIXA ATUAL GERADA -->
+    <div class="track highlight">
+      <div class="track-header">
+        <span class="track-title">🔊 Novo Áudio Gerado (100 Receitas + Vendas no iFood)</span>
+        <span class="badge badge-new">Gerado Agora</span>
+      </div>
+      <div class="track-text">
+        "Você pode transformar sua paixão por confeitaria em uma fonte de renda. Conheça nosso guia exclusivo com mais de 100 receitas de doces gourmet testadas e aprovadas, ideais para quem quer elevar as sobremesas e começar a vender neste fim de ano! Imagine a satisfação de ver seus doces sendo elogiados, compartilhados e procurados por quem prova. Com nosso guia exclusivo, você tem acesso a 10 cursos completos de alta confeitaria pelo preço de 1! Mais de 100 receitas de doces gourmet, ensinando a fazer: Cookies Gourmet, Brownies Gourmet, Copos da Felicidade, Tortas Mousse, Curso de Salgados Fritos e Assados, Curso de Panificação, e Guia exclusivo para elevar suas habilidades com vendas no iFood. Clique em Saiba mais agora e comece a criar doces com potencial de agradar clientes e se destacar na cozinha e nos negócios. Não perca essa oportunidade!"
+      </div>
+      <audio controls autoplay>
+        <source src="audio_talita_confeitaria_ifood.mp3" type="audio/mpeg">
+        Seu navegador não suporta reprodução de áudio.
+      </audio>
+    </div>
+
+    <!-- FAIXA COMPARATIVA KEVANO -->
+    <div class="track">
+      <div class="track-header">
+        <span class="track-title" style="color: #4ade80;">💡 Comparativo: Versão Validada de Alta Conversão (Espinha Dorsal 40s)</span>
+        <span class="badge badge-kevano">Padrão Kevano</span>
+      </div>
+      <div class="track-text kevano">
+        "E se você pudesse botar entre 150 e 300 reais de lucro limpo no bolso todo santo dia, sem arredar o pé da sua cozinha e sem deixar seus filhos com estranhos? Chega de ficar fazendo conta de cabeça no mercado ou ter que pedir dinheiro pro marido até pra comprar um remédio... O cookie custa R$ 2,50 e vende fácil por R$ 15 no iFood ou WhatsApp com o Método da Massa Congelada em 14 minutos!"
+      </div>
+      <audio controls>
+        <source src="narracao_talita_validada_kevano.mp3" type="audio/mpeg">
+        Seu navegador não suporta reprodução de áudio.
+      </audio>
+    </div>
+
+    <div class="specs">
+      <span>Arquivo: audio_talita_confeitaria_ifood.mp3</span>
+      <span>Base de Conhecimento: Claude-Knowledge (SOP-12)</span>
+    </div>
+  </div>
+</body>
+</html>
