@@ -1169,7 +1169,7 @@ src='https://www.facebook.com/tr?id=1046938031756007&ev=PageView&noscript=1'
 
       <div class="mt-6 pt-2">
         <!-- Botão Vermelho (#CA2F2F) conforme pedido pelo usuário -->
-        <a href="https://pay.cakto.com.br/573bxmz_1248031" target="_blank" rel="noopener noreferrer" class="pricing-cta-btn">
+        <a href="https://pay.cakto.com.br/573bxmz_1248031" target="_blank" rel="noopener noreferrer" class="pricing-cta-btn" id="btn-plano-basico" onclick="openOfferModal(event)">
           QUERO APENAS O PLANO BÁSICO
         </a>
         <div class="flex items-center justify-center gap-1.5 mt-3 text-[11px] text-foreground/60">
@@ -1684,6 +1684,344 @@ document.addEventListener('click', function(e) {
   setTimeout(appendUtms, 1000);
   setTimeout(appendUtms, 3000);
 })();
+</script>
+
+
+<!-- MODAL DE OFERTA EXCLUSIVA (UPGRADE DE R$ 14,99 PARA O COMPLETO) -->
+<style id="offer-modal-styles">
+  .offer-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+  }
+  .offer-modal-backdrop.active {
+    display: flex;
+    opacity: 1;
+  }
+  .offer-modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    background: #FFFAF3;
+    border-radius: 26px;
+    border: 3px solid #2563EB;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transform: scale(0.92) translateY(10px);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+  .offer-modal-backdrop.active .offer-modal-card {
+    transform: scale(1) translateY(0);
+  }
+  .offer-modal-header {
+    background: linear-gradient(180deg, #2563EB 0%, #1D4ED8 100%);
+    padding: 24px 20px 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+  }
+  .offer-badge-pill {
+    display: inline-block;
+    background-color: #FACC15;
+    color: #854D0E;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(234, 179, 8, 0.35);
+  }
+  .offer-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .offer-modal-close:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.08);
+  }
+  .offer-modal-title {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.22;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+  @media (min-width: 480px) {
+    .offer-modal-title {
+      font-size: 26px;
+    }
+  }
+  .offer-modal-subtitle {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-weight: 500;
+  }
+  .offer-modal-body {
+    padding: 20px 22px 22px;
+    text-align: center;
+  }
+  .offer-diff-tag {
+    color: #2563EB;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+  .offer-crossed-price {
+    color: #DC2626;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .offer-main-price {
+    font-size: 44px;
+    font-weight: 900;
+    color: #16A34A;
+    line-height: 1;
+    margin: 0 0 4px;
+    letter-spacing: -0.03em;
+  }
+  .offer-payment-note {
+    font-size: 11px;
+    color: #6B7280;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .offer-benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 14px;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #E5E7EB;
+  }
+  .offer-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #1F2937;
+    line-height: 1.25;
+  }
+  .offer-benefit-check {
+    color: #16A34A;
+    font-weight: 900;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .offer-btn-accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 20px;
+    background: linear-gradient(180deg, #22C55E 0%, #16A34A 100%);
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border-radius: 9999px;
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+    border: none;
+    border-bottom: 3px solid #15803D;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+  .offer-btn-accept:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 26px rgba(22, 163, 74, 0.55);
+    background: linear-gradient(180deg, #24DC67 0%, #15803D 100%);
+  }
+  .offer-btn-accept:active {
+    transform: translateY(1px);
+    border-bottom-width: 1px;
+  }
+  .offer-btn-decline {
+    display: block;
+    margin-top: 14px;
+    font-size: 11.5px;
+    color: #64748B;
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    line-height: 1.35;
+    font-weight: 600;
+    transition: color 0.15s;
+    width: 100%;
+  }
+  .offer-btn-decline:hover {
+    color: #0F172A;
+  }
+  .offer-trust-footer {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px dashed #CBD5E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 10.5px;
+    color: #64748B;
+    font-weight: 600;
+  }
+</style>
+
+<div id="offer-modal" class="offer-modal-backdrop" onclick="handleOfferBackdropClick(event)">
+  <div class="offer-modal-card" role="dialog" aria-modal="true" aria-labelledby="offer-modal-heading">
+    
+    <!-- Top Header Azul -->
+    <div class="offer-modal-header">
+      <button class="offer-modal-close" onclick="closeOfferModal()" aria-label="Fechar">&times;</button>
+      <span class="offer-badge-pill">ESPERE! OFERTA LIBERADA</span>
+      <h2 id="offer-modal-heading" class="offer-modal-title">
+        Leve o Premium completo por apenas R$ 33,98
+      </h2>
+      <p class="offer-modal-subtitle">
+        Uma condição especial disponível somente agora.
+      </p>
+    </div>
+
+    <!-- Body da Oferta -->
+    <div class="offer-modal-body">
+      <div class="offer-diff-tag">
+        Por apenas R$ 18,99 a mais que o Básico
+      </div>
+
+      <div class="offer-crossed-price">
+        Preço normal: <span style="text-decoration: line-through;">R$ 147,90</span>
+      </div>
+
+      <div class="offer-main-price">
+        R$ 33,98
+      </div>
+
+      <div class="offer-payment-note">
+        Pagamento único • sem mensalidade
+      </div>
+
+      <!-- Grid de Benefícios -->
+      <div class="offer-benefits-grid">
+        <div class="offer-benefit-item">
+          <span class="offer-benefit-check">✔</span>
+          <span>Todas as 35+ Receitas</span>
+        </div>
+        <div class="offer-benefit-item">
+          <span class="offer-benefit-check">✔</span>
+          <span>Todos os Bônus VIP</span>
+        </div>
+        <div class="offer-benefit-item">
+          <span class="offer-benefit-check">✔</span>
+          <span>Brownies & Sobremesas</span>
+        </div>
+        <div class="offer-benefit-item">
+          <span class="offer-benefit-check">✔</span>
+          <span>Atualizações Futuras</span>
+        </div>
+        <div class="offer-benefit-item">
+          <span class="offer-benefit-check">✔</span>
+          <span>Acesso Vitalício</span>
+        </div>
+        <div class="offer-benefit-item">
+          <span class="offer-benefit-check">✔</span>
+          <span>Garantia de 30 Dias</span>
+        </div>
+      </div>
+
+      <!-- Botão CTA Verde -->
+      <a href="https://pay.cakto.com.br/573bxmz_1248031" target="_blank" rel="noopener noreferrer" class="offer-btn-accept" id="offer-modal-accept-btn">
+        SIM! QUERO APROVEITAR POR R$ 33,98
+      </a>
+
+      <!-- Recusa discreta para prosseguir com o Básico de 14,99 -->
+      <a href="https://pay.cakto.com.br/573bxmz_1248031" target="_blank" rel="noopener noreferrer" class="offer-btn-decline" id="offer-modal-decline-btn">
+        Não, obrigado. Quero continuar apenas com o Básico por R$ 14,99
+      </a>
+
+      <!-- Rodapé de Confiança -->
+      <div class="offer-trust-footer">
+        <span>🔒 Compra 100% segura</span>
+        <span>•</span>
+        <span>⚡ Acesso digital imediato após a confirmação</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  var offerModalShown = false;
+
+  function openOfferModal(e) {
+    // Exibe o modal na primeira tentativa de clique no botão do Plano Básico
+    if (!offerModalShown) {
+      if (e) e.preventDefault();
+      offerModalShown = true;
+      var modal = document.getElementById('offer-modal');
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      return false;
+    }
+    // Se o usuário clicar novamente depois de fechar ou recusar, segue o link normalmente
+    return true;
+  }
+
+  function closeOfferModal() {
+    var modal = document.getElementById('offer-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function handleOfferBackdropClick(e) {
+    if (e.target.id === 'offer-modal') {
+      closeOfferModal();
+    }
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeOfferModal();
+    }
+  });
 </script>
 
 </body></html>
