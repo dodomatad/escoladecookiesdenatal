@@ -326,21 +326,23 @@ body { font-family: 'Montserrat', sans-serif; }
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 10px !important;
+    gap: 8px !important;
     width: 100% !important;
-    min-height: 64px !important;
-    padding: 18px 24px !important;
+    max-width: 380px !important; /* 90% da largura no mobile */
+    margin: 0 auto !important;
+    min-height: 57.6px !important; /* 90% de 64px */
+    padding: 14.4px 18px !important; /* 90% de 18px e 24px */
     background: linear-gradient(180deg, #E52E2E 0%, #B91C1C 100%) !important;
     color: #ffffff !important;
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 17px !important;
+    font-size: 15.3px !important; /* 90% de 17px */
     font-weight: 900 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.04em !important;
-    border-radius: 16px !important;
+    letter-spacing: 0.03em !important;
+    border-radius: 14px !important;
     border: 2px solid rgba(255, 255, 255, 0.45) !important;
-    border-bottom: 5px solid #7F1D1D !important;
-    box-shadow: 0 0 30px rgba(229, 46, 46, 0.6), 0 10px 20px rgba(0, 0, 0, 0.4) !important;
+    border-bottom: 4px solid #7F1D1D !important;
+    box-shadow: 0 0 26px rgba(229, 46, 46, 0.6), 0 8px 16px rgba(0, 0, 0, 0.35) !important;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
     position: relative !important;
     overflow: hidden !important;
@@ -351,9 +353,12 @@ body { font-family: 'Montserrat', sans-serif; }
   }
   @media (min-width: 640px) {
     .mentora-cta-btn {
+      max-width: 100% !important;
       font-size: 20px !important;
       padding: 20px 32px !important;
       min-height: 70px !important;
+      border-radius: 16px !important;
+      border-bottom-width: 5px !important;
     }
   }
   .mentora-cta-btn:hover {
