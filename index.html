@@ -2045,14 +2045,31 @@ document.addEventListener('click', function(e) {
   var offerModalShown = false;
 
   function openOfferModal(e) {
-    if (e) e.preventDefault();
+    if (e) {
+      if (typeof e.preventDefault === 'function') e.preventDefault();
+      if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
+    }
     var modal = document.getElementById('offer-modal');
     if (modal) {
       modal.classList.add('active');
+      modal.style.display = 'flex';
+      modal.style.opacity = '1';
       document.body.style.overflow = 'hidden';
     }
     return false;
   }
+
+  // Garantia absoluta: escuta cliques diretamente no elemento via capture phase
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('btn-plano-basico');
+    if (btn) {
+      btn.addEventListener('click', openOfferModal, true);
+      btn.addEventListener('touchstart', function(e) {
+        // Prepara feedback touch
+      }, { passive: true });
+    }
+  });
 
   function closeOfferModal() {
     var modal = document.getElementById('offer-modal');
