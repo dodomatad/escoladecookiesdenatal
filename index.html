@@ -1687,15 +1687,15 @@ document.addEventListener('click', function(e) {
 </script>
 
 
-<!-- MODAL DE OFERTA EXCLUSIVA (UPGRADE DE R$ 14,99 PARA O COMPLETO) -->
+<!-- MODAL DE OFERTA EXCLUSIVA (PALETA OFICIAL DO SITE + R$ 19,90 + BENEFÍCIOS COMPLETOS) -->
 <style id="offer-modal-styles">
   .offer-modal-backdrop {
     position: fixed;
     inset: 0;
     z-index: 99999;
-    background-color: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background-color: rgba(26, 17, 16, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: none;
     align-items: center;
     justify-content: center;
@@ -1710,29 +1710,35 @@ document.addEventListener('click', function(e) {
   .offer-modal-card {
     position: relative;
     width: 100%;
-    max-width: 440px;
-    background: #FFFAF3;
-    border-radius: 26px;
-    border: 3px solid #2563EB;
-    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    max-width: 480px;
+    background: #FFF9F7;
+    border-radius: 28px;
+    border: 3px solid #BC523F;
+    box-shadow: 0 25px 60px -10px rgba(188, 82, 63, 0.4), 0 10px 30px rgba(0, 0, 0, 0.45);
     overflow: hidden;
-    transform: scale(0.92) translateY(10px);
+    transform: scale(0.92) translateY(12px);
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    max-height: 94vh;
+    display: flex;
+    flex-direction: column;
   }
   .offer-modal-backdrop.active .offer-modal-card {
     transform: scale(1) translateY(0);
   }
   .offer-modal-header {
-    background: linear-gradient(180deg, #2563EB 0%, #1D4ED8 100%);
-    padding: 24px 20px 20px;
+    background: linear-gradient(135deg, #BC523F 0%, #A83826 100%);
+    padding: 22px 20px 18px;
     text-align: center;
     color: #ffffff;
     position: relative;
+    box-shadow: 0 4px 14px rgba(168, 56, 38, 0.25);
   }
   .offer-badge-pill {
-    display: inline-block;
-    background-color: #FACC15;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #FEF08A;
     color: #854D0E;
     font-size: 11px;
     font-weight: 900;
@@ -1740,8 +1746,9 @@ document.addEventListener('click', function(e) {
     text-transform: uppercase;
     padding: 5px 14px;
     border-radius: 9999px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(234, 179, 8, 0.35);
+    margin-bottom: 10px;
+    border: 1px solid #FACC15;
+    box-shadow: 0 2px 8px rgba(234, 179, 8, 0.3);
   }
   .offer-modal-close {
     position: absolute;
@@ -1750,7 +1757,7 @@ document.addEventListener('click', function(e) {
     width: 32px;
     height: 32px;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.22);
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -1762,109 +1769,142 @@ document.addEventListener('click', function(e) {
     transition: all 0.2s;
   }
   .offer-modal-close:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.38);
     transform: scale(1.08);
   }
   .offer-modal-title {
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 900;
     line-height: 1.22;
     margin: 0 0 6px;
     letter-spacing: -0.02em;
     color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   }
   @media (min-width: 480px) {
     .offer-modal-title {
-      font-size: 26px;
+      font-size: 25px;
     }
   }
   .offer-modal-subtitle {
     font-size: 12.5px;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     margin: 0;
     font-weight: 500;
   }
   .offer-modal-body {
-    padding: 20px 22px 22px;
+    padding: 18px 20px 20px;
     text-align: center;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .offer-diff-tag {
-    color: #2563EB;
-    font-size: 14px;
+    display: inline-block;
+    color: #BC523F;
+    background: rgba(188, 82, 63, 0.08);
+    border: 1px solid rgba(188, 82, 63, 0.25);
+    padding: 4px 14px;
+    border-radius: 9999px;
+    font-size: 13px;
     font-weight: 800;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .offer-crossed-price {
-    color: #DC2626;
+    color: #8C2A2A;
     font-size: 13px;
     font-weight: 700;
     margin-bottom: 2px;
   }
   .offer-main-price {
-    font-size: 44px;
+    font-size: 46px;
     font-weight: 900;
     color: #16A34A;
     line-height: 1;
     margin: 0 0 4px;
     letter-spacing: -0.03em;
+    text-shadow: 0 2px 10px rgba(22, 163, 74, 0.2);
   }
   .offer-payment-note {
     font-size: 11px;
     color: #6B7280;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     margin-bottom: 16px;
   }
-  .offer-benefits-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 14px;
-    text-align: left;
-    margin-bottom: 20px;
-    padding: 12px 14px;
+  .offer-benefits-container {
     background: #ffffff;
-    border-radius: 14px;
-    border: 1px solid #E5E7EB;
+    border: 1.5px solid #F1E5DF;
+    border-radius: 18px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 16px rgba(188, 82, 63, 0.08);
+    text-align: left;
   }
-  .offer-benefit-item {
+  .offer-benefits-heading {
+    font-size: 11.5px;
+    font-weight: 900;
+    color: #BC523F;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+    text-align: center;
     display: flex;
     align-items: center;
-    gap: 7px;
-    font-size: 11.5px;
-    font-weight: 700;
-    color: #1F2937;
-    line-height: 1.25;
+    justify-content: center;
+    gap: 6px;
   }
-  .offer-benefit-check {
+  .offer-benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8.5px;
+  }
+  .offer-benefit-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 12px;
+    line-height: 1.35;
+    color: #1F2937;
+  }
+  .offer-benefit-row strong {
+    color: #BC523F;
+    font-weight: 800;
+  }
+  .offer-benefit-row-check {
     color: #16A34A;
     font-weight: 900;
-    font-size: 13px;
+    font-size: 14px;
     flex-shrink: 0;
+    margin-top: -1px;
   }
   .offer-btn-accept {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     width: 100%;
     padding: 16px 20px;
-    background: linear-gradient(180deg, #22C55E 0%, #16A34A 100%);
+    background: linear-gradient(180deg, #22C55E 0%, #15803D 100%);
     color: #ffffff !important;
-    font-size: 16px;
+    font-size: 16.5px;
     font-weight: 900;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-decoration: none !important;
     border-radius: 9999px;
-    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+    box-shadow: 0 10px 24px rgba(22, 163, 74, 0.45);
     border: none;
-    border-bottom: 3px solid #15803D;
+    border-top: 1px solid rgba(255, 255, 255, 0.45);
+    border-bottom: 3px solid #0f5128;
     cursor: pointer;
     transition: all 0.2s ease;
     text-align: center;
   }
   .offer-btn-accept:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 12px 26px rgba(22, 163, 74, 0.55);
-    background: linear-gradient(180deg, #24DC67 0%, #15803D 100%);
+    box-shadow: 0 14px 28px rgba(22, 163, 74, 0.58);
+    background: linear-gradient(180deg, #28DE69 0%, #15803D 100%);
   }
   .offer-btn-accept:active {
     transform: translateY(1px);
@@ -1872,9 +1912,9 @@ document.addEventListener('click', function(e) {
   }
   .offer-btn-decline {
     display: block;
-    margin-top: 14px;
+    margin-top: 13px;
     font-size: 11.5px;
-    color: #64748B;
+    color: #78716C;
     text-decoration: underline;
     cursor: pointer;
     background: none;
@@ -1886,18 +1926,18 @@ document.addEventListener('click', function(e) {
     width: 100%;
   }
   .offer-btn-decline:hover {
-    color: #0F172A;
+    color: #1C1917;
   }
   .offer-trust-footer {
     margin-top: 14px;
     padding-top: 10px;
-    border-top: 1px dashed #CBD5E1;
+    border-top: 1px dashed #E7D7D2;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
     font-size: 10.5px;
-    color: #64748B;
+    color: #78716C;
     font-weight: 600;
   }
 </style>
@@ -1905,22 +1945,22 @@ document.addEventListener('click', function(e) {
 <div id="offer-modal" class="offer-modal-backdrop" onclick="handleOfferBackdropClick(event)">
   <div class="offer-modal-card" role="dialog" aria-modal="true" aria-labelledby="offer-modal-heading">
     
-    <!-- Top Header Azul -->
+    <!-- Top Header Paleta da Marca (#BC523F) -->
     <div class="offer-modal-header">
       <button class="offer-modal-close" onclick="closeOfferModal()" aria-label="Fechar">&times;</button>
-      <span class="offer-badge-pill">ESPERE! OFERTA LIBERADA</span>
+      <span class="offer-badge-pill">🔥 OFERTA EXCLUSIVA DESBLOQUEADA</span>
       <h2 id="offer-modal-heading" class="offer-modal-title">
-        Leve o Premium completo por apenas R$ 29,90
+        Leve o Plano Completo por apenas R$ 19,90
       </h2>
       <p class="offer-modal-subtitle">
-        Uma condição especial disponível somente agora.
+        Uma oportunidade única disponível somente nesta página agora!
       </p>
     </div>
 
     <!-- Body da Oferta -->
     <div class="offer-modal-body">
       <div class="offer-diff-tag">
-        Por apenas R$ 14,91 a mais que o Básico
+        ⭐ Por apenas R$ 4,91 a mais que o Básico!
       </div>
 
       <div class="offer-crossed-price">
@@ -1928,56 +1968,73 @@ document.addEventListener('click', function(e) {
       </div>
 
       <div class="offer-main-price">
-        R$ 29,90
+        R$ 19,90
       </div>
 
       <div class="offer-payment-note">
-        Pagamento único • sem mensalidade
+        Pagamento Único • Acesso Vitalício • Sem Mensalidade
       </div>
 
-      <!-- Grid de Benefícios -->
-      <div class="offer-benefits-grid">
-        <div class="offer-benefit-item">
-          <span class="offer-benefit-check">✔</span>
-          <span>Todas as 35+ Receitas</span>
+      <!-- Container com TODOS os Benefícios do Plano Completo -->
+      <div class="offer-benefits-container">
+        <div class="offer-benefits-heading">
+          <span>🎁</span> O QUE VOCÊ LEVA LIBERADO NO SEU ACESSO:
         </div>
-        <div class="offer-benefit-item">
-          <span class="offer-benefit-check">✔</span>
-          <span>Todos os Bônus VIP</span>
-        </div>
-        <div class="offer-benefit-item">
-          <span class="offer-benefit-check">✔</span>
-          <span>Brownies & Sobremesas</span>
-        </div>
-        <div class="offer-benefit-item">
-          <span class="offer-benefit-check">✔</span>
-          <span>Atualizações Futuras</span>
-        </div>
-        <div class="offer-benefit-item">
-          <span class="offer-benefit-check">✔</span>
-          <span>Acesso Vitalício</span>
-        </div>
-        <div class="offer-benefit-item">
-          <span class="offer-benefit-check">✔</span>
-          <span>Garantia de 30 Dias</span>
+        <div class="offer-benefits-list">
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Cookies Gourmet:</strong> Todas as 35+ receitas irresistíveis e combinações mais pedidas</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Brownies Gourmet:</strong> Técnicas para fatias perfeitas e alto valor de venda</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Copos da Felicidade:</strong> Camadas cremosas que encantam qualquer cliente</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Tortas Mousse Lucrativas:</strong> Sobremesas sofisticadas para valorizar o cardápio</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Macarons Franceses & Cupcakes Decorados:</strong> Massas fofas e coberturas premium</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Brigadeiros Gourmet & Trufados:</strong> Ponto perfeito sem queimar</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Manual do iFood Lucrativo:</strong> Estrutura de delivery para vender de casa</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Planilha Automática de Custos:</strong> Calcule o lucro no centavo sem prejuízo</span>
+          </div>
+          <div class="offer-benefit-row">
+            <span class="offer-benefit-row-check">✔</span>
+            <span><strong>Acesso Vitalício + Atualizações + Garantia Total de 30 Dias</strong></span>
+          </div>
         </div>
       </div>
 
-      <!-- Botão CTA Verde -->
+      <!-- Botão CTA Verde Pulsante -->
       <a href="https://pay.cakto.com.br/573bxmz_1248031" target="_blank" rel="noopener noreferrer" class="offer-btn-accept" id="offer-modal-accept-btn">
-        SIM! QUERO APROVEITAR POR R$ 29,90
+        <span>👉</span> SIM! QUERO O PLANO COMPLETO POR R$ 19,90
       </a>
 
       <!-- Recusa discreta para prosseguir com o Básico de 14,99 -->
       <a href="https://pay.cakto.com.br/573bxmz_1248031" target="_blank" rel="noopener noreferrer" class="offer-btn-decline" id="offer-modal-decline-btn">
-        Não, obrigado. Quero continuar apenas com o Básico por R$ 14,99
+        Não, prefiro abrir mão de todas as receitas e continuar apenas com o Básico por R$ 14,99
       </a>
 
       <!-- Rodapé de Confiança -->
       <div class="offer-trust-footer">
-        <span>🔒 Compra 100% segura</span>
+        <span>🔒 Pagamento 100% Seguro</span>
         <span>•</span>
-        <span>⚡ Acesso digital imediato após a confirmação</span>
+        <span>⚡ Acesso liberado imediatamente no e-mail</span>
       </div>
     </div>
 
@@ -1988,7 +2045,6 @@ document.addEventListener('click', function(e) {
   var offerModalShown = false;
 
   function openOfferModal(e) {
-    // Exibe o modal na primeira tentativa de clique no botão do Plano Básico
     if (!offerModalShown) {
       if (e) e.preventDefault();
       offerModalShown = true;
@@ -1999,7 +2055,6 @@ document.addEventListener('click', function(e) {
       }
       return false;
     }
-    // Se o usuário clicar novamente depois de fechar ou recusar, segue o link normalmente
     return true;
   }
 
