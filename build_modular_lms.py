@@ -208,11 +208,8 @@ def generate_completo_html():
         <!-- CARD MÓDULO 4 (BÔNUS SALGADOS) -->
         <div onclick="selectModule(4)" id="btn-card-mod-4" class="module-card bg-[#191211] rounded-2xl p-4 border border-stone-800 flex flex-col justify-between group">
           <div>
-            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80 bg-gradient-to-br from-amber-950 via-stone-900 to-amber-900 flex items-center justify-center">
-              <div class="text-center p-2">
-                <span class="text-4xl">🥐</span>
-                <p class="text-[11px] font-black text-amber-400 mt-1 uppercase">Panificação Nobre</p>
-              </div>
+            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80">
+              <img src="carrossel_salgados_panificacao.jpg" alt="Salgados Comerciais e Panificação" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
               <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-md shadow-md">
                 Bônus VIP
               </span>
@@ -1121,10 +1118,8 @@ def generate_principal_html():
         <!-- CARD MÓDULO 4 (BLOQUEADO) -->
         <div onclick="openUpgradeModal('Salgados Comerciais & Panificação')" id="btn-card-mod-4" class="module-card bg-[#140E0E] rounded-2xl p-4 border border-stone-800/60 flex flex-col justify-between group opacity-85 hover:opacity-100">
           <div>
-            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80 bg-stone-900 flex items-center justify-center">
-              <div class="text-center p-2 opacity-50">
-                <span class="text-4xl">🥐</span>
-              </div>
+            <div class="relative w-full h-36 rounded-xl overflow-hidden mb-3 border border-stone-800/80">
+              <img src="carrossel_salgados_panificacao.jpg" alt="Salgados Comerciais e Panificação" class="w-full h-full object-cover grayscale-[30%] group-hover:scale-105 transition-transform duration-300">
               <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <span class="bg-black/80 backdrop-blur text-amber-400 border border-amber-500/40 text-xs font-black px-3 py-1.5 rounded-full shadow-lg">
                   🔒 VIP Exclusivo
