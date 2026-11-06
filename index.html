@@ -1157,16 +1157,41 @@ src='https://www.facebook.com/tr?id=1046938031756007&ev=PageView&noscript=1'
     color: #CA2F2F !important;
     font-weight: 700 !important;
   }
-  .badge-urgencia-amarela {
+    .badge-urgencia-amarela {
     background-color: #FEF08A !important;
     color: #854D0E !important;
     border: 1px solid #FACC15 !important;
+  }
+
+  /* Destaque visual marcante em badge para "Inscrição" */
+  .inscricao-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    color: #B91C1C !important; /* Vermelho radiante de alto contraste */
+    background: #FEE2E2 !important; /* Fundo suave avermelhado */
+    border: 1.5px solid #FCA5A5 !important; /* Borda bem definida */
+    padding: 6px 20px !important;
+    border-radius: 9999px !important;
+    font-size: 15.5px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 4px 14px rgba(202, 47, 47, 0.16) !important;
+    margin-bottom: 6px !important;
+  }
+  @media (min-width: 640px) {
+    .inscricao-tag {
+      font-size: 17.5px !important;
+      padding: 7px 24px !important;
+    }
   }
 </style>
 
 <div class="pricing-container">
   <div class="text-center">
-    <p class="text-primary font-medium font-headline text-xl sm:text-2xl">Inscrição</p>
+    <p class="inscricao-tag text-primary font-medium font-headline text-xl sm:text-2xl">Inscrição</p>
     <h2 class="text-3xl sm:text-4xl font-bold font-headline mt-2 text-foreground">Garanta Sua Vaga</h2>
     <p class="text-xs sm:text-sm text-muted-foreground mt-2">Escolha o plano ideal para começar hoje mesmo</p>
   </div>
