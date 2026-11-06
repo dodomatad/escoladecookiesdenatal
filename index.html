@@ -217,33 +217,51 @@ body { font-family: 'Montserrat', sans-serif; }
   }
 </style>
 <style id="mentora-cards-styles">
-  /* Redução matemática exata de 15% nos 6 cards da Mentora */
+  /* Cards da Mentora: Fundo branco com detalhes vermelhos e redução de 5% no tamanho */
   .mentora-cards-container {
-    max-width: 465.1px !important; /* 85% de 547.2px */
-    gap: 12.9px !important; /* 85% de 15.2px */
+    max-width: 441.8px !important; /* 95% de 465.1px */
+    gap: 12.2px !important; /* 95% de 12.9px */
     margin-left: auto !important;
     margin-right: auto !important;
   }
   .mentora-feature-card {
-    padding: 12.9px !important; /* 85% de 15.2px */
-    gap: 12.9px !important; /* 85% de 15.2px */
-    border-radius: 12.9px !important; /* 85% de 15.2px */
+    background: #ffffff !important;
+    border: 1.5px solid #FCA5A5 !important; /* Detalhe em borda vermelha suave */
+    border-left: 4px solid #CA2F2F !important; /* Destaque elegante vermelho na lateral */
+    box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    padding: 12.2px 14px !important; /* 95% de 12.9px */
+    gap: 12.2px !important; /* 95% de 12.9px */
+    border-radius: 12.2px !important; /* 95% de 12.9px */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
+  }
+  .mentora-feature-card:hover {
+    transform: translateY(-2px) !important;
+    border-color: #E11D48 !important;
+    border-left-color: #B91C1C !important;
+    box-shadow: 0 8px 24px rgba(202, 47, 47, 0.22) !important;
   }
   .mentora-feature-emoji {
-    font-size: 24.2px !important; /* 85% de 28.5px */
+    font-size: 23.0px !important; /* 95% de 24.2px */
+    flex-shrink: 0 !important;
   }
   @media (min-width: 640px) {
     .mentora-feature-emoji {
-      font-size: 29.1px !important; /* 85% de 34.2px */
+      font-size: 27.6px !important; /* 95% de 29.1px */
     }
   }
   .mentora-feature-text {
-    font-size: 13.0px !important; /* 85% de 15.2px */
-    line-height: 1.35 !important;
+    font-size: 12.3px !important; /* 95% de 13.0px */
+    line-height: 1.38 !important;
+    color: #1F2937 !important; /* Legibilidade perfeita no fundo branco */
+  }
+  .mentora-feature-text b,
+  .mentora-feature-text strong {
+    color: #CA2F2F !important; /* Detalhe e ênfase em vermelho vibrante */
+    font-weight: 800 !important;
   }
   @media (min-width: 640px) {
     .mentora-feature-text {
-      font-size: 14.5px !important; /* 85% de 17.1px */
+      font-size: 13.8px !important; /* 95% de 14.5px */
     }
   }
 </style>
