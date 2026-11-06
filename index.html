@@ -36,7 +36,7 @@ body { font-family: 'Montserrat', sans-serif; }
 
 
 <style id="countdown-mobile-styles">
-  /* Faixa Superior de Urgência Compacta e Impactante */
+  /* Faixa Superior de Urgencia com Botoes Brancos em Destaque */
   .countdown-header-mobile {
     background: linear-gradient(90deg, #B91C1C 0%, #CA2F2F 50%, #B91C1C 100%) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
@@ -65,11 +65,23 @@ body { font-family: 'Montserrat', sans-serif; }
   .countdown-timer-mobile {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 6px !important;
+    gap: 8px !important;
+  }
+  .countdown-badge-white {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border: 1.5px solid #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
   }
   .countdown-num-mobile {
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 900 !important;
+    color: #CA2F2F !important;
+  }
+  .countdown-label-unit {
+    color: #CA2F2F !important;
+    font-weight: 800 !important;
   }
 </style>
 
@@ -429,14 +441,14 @@ src='https://www.facebook.com/tr?id=1046938031756007&ev=PageView&noscript=1'
       <p class="countdown-title-mobile font-headline italic text-white text-base sm:text-xl md:text-2xl font-black tracking-tight" style="color: #ffffff !important; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);">Inscrição encerra Hoje</p>
     </div>
     <div class="countdown-timer-mobile flex items-center justify-center gap-2">
-      <div class="flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-white shadow-sm" style="background-color: #ffffff !important;">
-        <span id="cd-minutes" class="countdown-num-mobile text-sm sm:text-base md:text-lg font-black text-[#CA2F2F]" style="color: #CA2F2F !important;">25</span>
-        <span class="text-[10px] sm:text-xs font-extrabold text-[#CA2F2F] uppercase" style="color: #CA2F2F !important;">min</span>
+      <div class="countdown-badge-white flex items-center gap-1 px-3 py-1 rounded-lg shadow-md" style="background: #ffffff !important; background-color: #ffffff !important; border: 1.5px solid #ffffff !important; box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;">
+        <span id="cd-minutes" class="countdown-num-mobile text-sm sm:text-base md:text-lg font-black" style="color: #CA2F2F !important; font-weight: 900 !important;">25</span>
+        <span class="countdown-label-unit text-[11px] sm:text-xs font-extrabold uppercase" style="color: #CA2F2F !important; font-weight: 800 !important;">MIN</span>
       </div>
-      <span class="text-white font-black text-base sm:text-lg">:</span>
-      <div class="flex items-center gap-1 bg-white px-2.5 py-1 rounded-lg border border-white shadow-sm" style="background-color: #ffffff !important;">
-        <span id="cd-seconds" class="countdown-num-mobile text-sm sm:text-base md:text-lg font-black text-[#CA2F2F]" style="color: #CA2F2F !important;">00</span>
-        <span class="text-[10px] sm:text-xs font-extrabold text-[#CA2F2F] uppercase" style="color: #CA2F2F !important;">seg</span>
+      <span class="text-white font-black text-base sm:text-lg" style="color: #ffffff !important; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">:</span>
+      <div class="countdown-badge-white flex items-center gap-1 px-3 py-1 rounded-lg shadow-md" style="background: #ffffff !important; background-color: #ffffff !important; border: 1.5px solid #ffffff !important; box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;">
+        <span id="cd-seconds" class="countdown-num-mobile text-sm sm:text-base md:text-lg font-black" style="color: #CA2F2F !important; font-weight: 900 !important;">00</span>
+        <span class="countdown-label-unit text-[11px] sm:text-xs font-extrabold uppercase" style="color: #CA2F2F !important; font-weight: 800 !important;">SEG</span>
       </div>
     </div>
   </div>
