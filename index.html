@@ -36,52 +36,41 @@ body { font-family: 'Montserrat', sans-serif; }
 
 
 <style id="countdown-mobile-styles">
-  /* Redução matemática de mais 5% no Header de Contagem Regressiva no Mobile (< 768px) */
-  @media (max-width: 767px) {
-    .countdown-header-mobile {
-      padding-top: 28.9px !important; /* 95% de 30.4px */
-      padding-bottom: 28.9px !important;
-    }
-    .countdown-content-mobile {
-      gap: 28.9px !important; /* 95% de 30.4px */
-    }
-    .countdown-title-mobile {
-      font-size: 27.1px !important; /* 95% de 28.5px */
-      line-height: 1.25 !important;
-    }
-    .countdown-timer-mobile {
-      gap: 7.2px !important; /* 95% de 7.6px */
-    }
-    .countdown-box-mobile {
-      width: 57.8px !important; /* 95% de 60.8px */
-      height: 57.8px !important;
-      min-width: 57.8px !important;
-      min-height: 57.8px !important;
-    }
-    .countdown-num-mobile {
-      font-size: 21.7px !important; /* 95% de 22.8px */
-    }
-    .countdown-label-mobile {
-      font-size: 9.9px !important; /* 95% de 10.45px */
-    }
+  /* Faixa Superior de Urgência Compacta e Impactante */
+  .countdown-header-mobile {
+    background: linear-gradient(90deg, #B91C1C 0%, #CA2F2F 50%, #B91C1C 100%) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
-  /* Destaque máximo na escrita do título (Vermelho Oficial Intenso + Peso Extra) */
+  .countdown-content-mobile {
+    gap: 12px !important;
+  }
   .countdown-title-mobile {
-    color: #CA2F2F !important;
+    color: #ffffff !important;
     font-weight: 800 !important;
-    text-shadow: 0 2px 4px rgba(202, 47, 47, 0.25), 0 4px 12px rgba(202, 47, 47, 0.18), 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+    font-size: 15.5px !important;
+    margin: 0 !important;
+    letter-spacing: 0.01em !important;
   }
-  .countdown-box-mobile {
-    background-color: #CA2F2F !important;
-    border-color: #b32626 !important;
-    box-shadow: 0 4px 14px rgba(202, 47, 47, 0.28) !important;
+  @media (min-width: 640px) {
+    .countdown-title-mobile {
+      font-size: 19px !important;
+    }
+    .countdown-header-mobile {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+  }
+  .countdown-timer-mobile {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
   }
   .countdown-num-mobile {
-    color: #ffffff !important;
-  }
-  .countdown-label-mobile {
-    color: #000000 !important;
+    font-family: 'Montserrat', sans-serif !important;
     font-weight: 900 !important;
+    color: #ffffff !important;
   }
 </style>
 
@@ -422,22 +411,21 @@ src='https://www.facebook.com/tr?id=1046938031756007&ev=PageView&noscript=1'
 /></noscript>
 <!-- End Meta Pixel Code -->
 
-</head><body class="font-body antialiased __variable_6bee3b __variable_1c86d0 __variable_0f62d1"><div hidden=""><!--$--><!--/$--></div><!--$--><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1046938031756007&amp;ev=PageView&amp;noscript=1"/></noscript><!--/$--><div class="bg-background"><header class="countdown-header-mobile bg-[#FAF7F2] border-b border-[#E8DFD5] py-8 px-4 sm:px-6 relative shadow-sm">
-  <div class="countdown-content-mobile container mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-12">
-    <p class="countdown-title-mobile font-headline italic text-[#CA2F2F] text-3xl sm:text-4xl md:text-5xl text-center leading-tight font-extrabold" style="color: #CA2F2F !important; font-weight: 800 !important; text-shadow: 0 2px 4px rgba(202, 47, 47, 0.25), 0 4px 12px rgba(202, 47, 47, 0.18);">Inscrições abertas</p>
-    <div class="countdown-timer-mobile flex items-center justify-center gap-3 sm:gap-4 md:gap-6">
-      <div class="flex flex-col items-center gap-1 sm:gap-2">
-        <div class="countdown-box-mobile bg-[#CA2F2F] rounded-xl sm:rounded-2xl w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center shadow-md border-2 border-[#b32626]">
-          <span id="cd-minutes" class="countdown-num-mobile text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">15</span>
-        </div>
-        <span class="countdown-label-mobile text-[11px] sm:text-xs md:text-sm font-black text-black uppercase tracking-wider">Minutos</span>
+</head><body class="font-body antialiased __variable_6bee3b __variable_1c86d0 __variable_0f62d1"><div hidden=""><!--$--><!--/$--></div><!--$--><noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1046938031756007&amp;ev=PageView&amp;noscript=1"/></noscript><!--/$--><div class="bg-background"><header class="countdown-header-mobile bg-[#CA2F2F] text-white py-2.5 px-4 sm:px-6 relative shadow-md overflow-hidden z-30">
+  <div class="countdown-content-mobile container mx-auto flex flex-row items-center justify-center gap-3 sm:gap-6 flex-wrap">
+    <div class="flex items-center gap-2">
+      <span class="inline-block animate-pulse text-sm sm:text-base">🔥</span>
+      <p class="countdown-title-mobile font-headline italic text-white text-base sm:text-xl md:text-2xl font-black tracking-tight" style="color: #ffffff !important; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);">Inscrições abertas</p>
+    </div>
+    <div class="countdown-timer-mobile flex items-center justify-center gap-1.5 sm:gap-2">
+      <div class="flex items-center gap-1 bg-black/25 px-2.5 py-1 rounded-lg border border-white/20 shadow-inner">
+        <span id="cd-minutes" class="countdown-num-mobile text-sm sm:text-base md:text-lg font-black text-white">15</span>
+        <span class="text-[10px] sm:text-xs font-bold text-white/90 uppercase">min</span>
       </div>
-      <div class="text-[#CA2F2F] text-2xl sm:text-3xl font-black pb-5 sm:pb-6">:</div>
-      <div class="flex flex-col items-center gap-1 sm:gap-2">
-        <div class="countdown-box-mobile bg-[#CA2F2F] rounded-xl sm:rounded-2xl w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex items-center justify-center shadow-md border-2 border-[#b32626]">
-          <span id="cd-seconds" class="countdown-num-mobile text-2xl sm:text-3xl md:text-4xl font-extrabold text-white">00</span>
-        </div>
-        <span class="countdown-label-mobile text-[11px] sm:text-xs md:text-sm font-black text-black uppercase tracking-wider">Segundos</span>
+      <span class="text-white font-black text-sm sm:text-base">:</span>
+      <div class="flex items-center gap-1 bg-black/25 px-2.5 py-1 rounded-lg border border-white/20 shadow-inner">
+        <span id="cd-seconds" class="countdown-num-mobile text-sm sm:text-base md:text-lg font-black text-white">00</span>
+        <span class="text-[10px] sm:text-xs font-bold text-white/90 uppercase">seg</span>
       </div>
     </div>
   </div>
