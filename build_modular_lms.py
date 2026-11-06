@@ -283,7 +283,441 @@ def generate_completo_html():
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
-                <img src="curso-de-salgados-top-10_capa.jpg" alt="Curso Salgados Top 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                <img src="carrossel_cookies_recheados.jpg" alt="Especialista em Cookies" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#E15A4F]">Curso Principal</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Especialista em Cookies</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Domine as massas perfeitas, técnicas de ponto, recheios irresistíveis e o padrão profissional que vende todo dia.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila Oficial (1,2 MB)</span>
+              <a href="materiais/especialista-em-cookies.pdf" download="especialista-em-cookies.pdf" class="inline-flex items-center gap-1.5 bg-[#E15A4F] hover:bg-[#C9473C] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2: Manual do iFood Lucrativo -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="capa_curso_confeitaria_completo.jpg" alt="Manual do iFood Lucrativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#EA1D2C]">Guia Oficial iFood</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Manual do iFood Lucrativo</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Como cadastrar seu cardápio, criar combos magnéticos e posicionar sua loja no topo do aplicativo na sua região.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Manual Digital (3,4 MB)</span>
+              <a href="materiais/manual-ifood-lucrativo.pdf" download="manual-ifood-lucrativo.pdf" class="inline-flex items-center gap-1.5 bg-[#EA1D2C] hover:bg-[#c41521] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3: Cookies para Delivery -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="v1_frame_06.jpg" alt="Cookies para Delivery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Operação & Embalagem</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Cookies para Delivery</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Técnicas de conservação, transporte seguro sem quebrar o cookie e embalagens térmicas que encantam o cliente.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila Técnica (1,4 MB)</span>
+              <a href="materiais/cookies-para-delivery.pdf" download="cookies-para-delivery.pdf" class="inline-flex items-center gap-1.5 bg-[#16A34A] hover:bg-[#15803D] text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 4: Masterclass Cookies -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="v2_frame_05.jpg" alt="Masterclass Cookies" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Conteúdo Avançado</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Apostila Masterclass Cookies</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Segredos de textura, crocância por fora e maciez por dentro que diferenciam seu produto da concorrência comum.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Masterclass (2,5 MB)</span>
+              <a href="materiais/apostila-masterclass-cookies.pdf" download="apostila-masterclass-cookies.pdf" class="inline-flex items-center gap-1.5 bg-rose-600 hover:bg-rose-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 5: Cookies Tradicionais -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="v1_frame_08.jpg" alt="Guia Fotografia Gastronômica" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange-400">Receitas Clássicas</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Cookies Tradicionais & Clássicos</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">As fórmulas consagradas que não saem de moda: gotas de chocolate meio amargo, baunilha clássica e red velvet.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Livro de Receitas (6,2 MB)</span>
+              <a href="materiais/cookies-tradicionais-receitas-classicas.pdf" download="cookies-tradicionais-receitas-classicas.pdf" class="inline-flex items-center gap-1.5 bg-orange-600 hover:bg-orange-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 6: Guia de Precificação Profissional -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="capa_cookies_natal_basico.jpg" alt="Planilha de Precificação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Gestão & Finanças</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Guia de Precificação Profissional</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Aprenda a calcular custos fixos, variáveis, taxas de entrega e sua margem de lucro real para nunca ter prejuízo.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Guia Financeiro (1,1 MB)</span>
+              <a href="materiais/guia-de-precificacao-profissional.pdf" download="guia-de-precificacao-profissional.pdf" class="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 7: Planilha de Precificação -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="capa_natal_mobile.jpg" alt="Bônus Cookies de Natal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Ferramenta Automática</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Planilha de Precificação</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Ferramenta prática e automatizada para calcular o preço exato de cada receita e garantir seu lucro com 1 clique.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📊 Planilha & Material (27 KB)</span>
+              <a href="materiais/planilha-de-precificacao.pdf" download="planilha-de-precificacao.pdf" class="inline-flex items-center gap-1.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 8: Estratégias Avançadas iFood -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="curso_confeitaria_selo.jpg" alt="Certificado de Conclusão" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Apostila Completa Delivery</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Estratégias Avançadas iFood</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">Guia completo e aprofundado para alavancar pedidos diários e transformar sua loja em referência na cidade.</p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Livro Digital (94,8 MB)</span>
+              <a href="materiais/estrategias-avancadas-ifood.pdf" download="estrategias-avancadas-ifood.pdf" class="inline-flex items-center gap-1.5 bg-purple-700 hover:bg-purple-800 text-white text-sm font-bold px-4 py-2 rounded-lg transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BARRA INFERIOR DE NAVEGAÇÃO -->
+        <div class="mt-8 p-4 rounded-xl bg-stone-900/60 border border-stone-800 flex items-center justify-between">
+          <span class="text-xs text-stone-400 font-semibold">Concluiu os Cookies? Vá para o próximo:</span>
+          <button onclick="selectModule(2)" class="inline-flex items-center gap-1.5 bg-[#DB2777] hover:bg-[#BE185D] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg transition-all">
+            Ir para Módulo 2: Sobremesas →
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- CONTEÚDO MÓDULO 2: SOBREMESAS & BROWNIES (3 ITENS) -->
+      <!-- ============================================== -->
+      <section id="content-mod-2" class="module-content-pane hidden fade-in-content">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-4 border-b border-stone-800 gap-3">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-[#DB2777]/10 text-[#DB2777] font-bold text-xs uppercase px-3 py-1 rounded-full mb-2 border border-[#DB2777]/20">
+              <span>🍫</span> Especial Confeitaria Fina
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Módulo 2: Sobremesas Lucrativas & Brownies</h3>
+            <p class="text-sm text-stone-400 mt-1">Apostilas de brownies gourmet, copos da felicidade e tortas mousse aeradas</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-pink-950/80 text-pink-400 border border-pink-500/30 font-extrabold text-xs sm:text-sm px-3.5 py-1.5 rounded-full">
+              ✓ 3 Materiais Liberados
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Item 9: Ana Brownie - Brownies Gourmet -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="carrossel_brownies_gourmet.jpg" alt="Brownies Gourmet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Curso Ana Brownie</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Brownies Gourmet Perfeitos</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+                  Casquinha brilhante, centro molhadinho, técnicas de corte, recheios em camadas e precificação comercial.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila (1,1 MB)</span>
+              <a href="materiais_sobremesas/ana-brownie-brownies-gourmet.pdf" download="ana-brownie-brownies-gourmet.pdf" class="inline-flex items-center gap-1.5 bg-[#DB2777] hover:bg-[#BE185D] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 10: Apostila Copos da Felicidade -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="carrossel_copos_felicidade.jpg" alt="Copos da Felicidade" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#DB2777]">Campeão de Vendas Delivery</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Copos da Felicidade</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+                  Montagens irresistíveis em camadas, cremes aveludados, caldas especiais e decoração que atrai pedidos.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila (10,8 MB)</span>
+              <a href="materiais_sobremesas/apostila-copos-da-felicidade.pdf" download="apostila-copos-da-felicidade.pdf" class="inline-flex items-center gap-1.5 bg-[#DB2777] hover:bg-[#BE185D] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 11: Tortas Mousse Lucrativas -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="carrossel_tortas_mousse.jpg" alt="Tortas Mousse Lucrativas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Cardápio de Alto Padrão</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Tortas Mousse Lucrativas</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+                  Bases crocantes, mousses aeradas que derretem na boca, espelhamento vitrine e alta margem de lucro.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila (11,4 MB)</span>
+              <a href="materiais_sobremesas/tortas-mousse-lucrativas.pdf" download="tortas-mousse-lucrativas.pdf" class="inline-flex items-center gap-1.5 bg-[#DB2777] hover:bg-[#BE185D] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BARRA INFERIOR DE NAVEGAÇÃO -->
+        <div class="mt-8 p-4 rounded-xl bg-stone-900/60 border border-stone-800 flex items-center justify-between">
+          <button onclick="selectModule(1)" class="inline-flex items-center gap-1.5 bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg transition-all">
+            ← Voltar ao Módulo 1
+          </button>
+          <button onclick="selectModule(3)" class="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-500 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg transition-all">
+            Ir para Módulo 3: Doces Finos →
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- CONTEÚDO MÓDULO 3: BRIGADEIROS & MACARONS (3 ITENS) -->
+      <!-- ============================================== -->
+      <section id="content-mod-3" class="module-content-pane hidden fade-in-content">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-4 border-b border-stone-800 gap-3">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 font-bold text-xs uppercase px-3 py-1 rounded-full mb-2 border border-amber-500/20">
+              <span>✨</span> Alta Confeitaria & Doces Finos
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Módulo 3: Brigadeiros Gourmet, Cupcakes & Macarons</h3>
+            <p class="text-sm text-stone-400 mt-1">Apostilas completas com 60 receitas de brigadeiros, cupcakes artesanais e macarons franceses</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-amber-950/80 text-amber-400 border border-amber-500/30 font-extrabold text-xs sm:text-sm px-3.5 py-1.5 rounded-full">
+              ✓ 3 Materiais Liberados
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Item 12: 60 Receitas de Brigadeiros -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="carrossel_brigadeiros_gourmet.jpg" alt="60 Receitas de Brigadeiros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Doces Tradicionais & Finos</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">60 Receitas de Brigadeiros</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+                  Ponto de enrolar perfeito, ponto de bico, sabores gourmet luxuosos, decorações nobres e validade prolongada.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila (10,5 MB)</span>
+              <a href="materiais_doces/brigadeiros-60-receitas.pdf" download="brigadeiros-60-receitas.pdf" class="inline-flex items-center gap-1.5 bg-[#E15A4F] hover:bg-[#C9473C] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 13: Cupcakes Gourmet -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="carrossel_cupcakes_decorados.jpg" alt="Cupcakes Gourmet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-pink-400">Massas Fofas & Recheios</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Cupcakes Gourmet</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+                  Massas ultra macias, técnicas de recheio no centro, coberturas aveludadas que não derretem e apresentação vitrine.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila (9,8 MB)</span>
+              <a href="materiais_doces/cupcakes-gourmet.pdf" download="cupcakes-gourmet.pdf" class="inline-flex items-center gap-1.5 bg-[#DB2777] hover:bg-[#BE185D] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 14: Macarons Franceses -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="carrossel_macarons_gourmet.jpg" alt="Macarons Franceses" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+              </div>
+              <div class="flex-1 min-w-0">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-400">Patisserie Francesa</span>
+                <h4 class="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">Macarons Franceses</h4>
+                <p class="text-xs sm:text-sm text-stone-300 mt-2 leading-relaxed">
+                  Técnica do merengue italiano e francês, macaronagem precisa, saia perfeita, secagem e recheios estáveis.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-stone-800 flex items-center justify-between mt-auto">
+              <span class="text-xs font-semibold text-stone-500">📄 Apostila (130 MB)</span>
+              <a href="materiais_doces/macarons-franceses.pdf" download="macarons-franceses.pdf" class="inline-flex items-center gap-1.5 bg-[#6366F1] hover:bg-[#4F46E5] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-xl transition-colors shadow-sm">
+                Acessar a aula
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BARRA INFERIOR DE NAVEGAÇÃO -->
+        <div class="mt-8 p-4 rounded-xl bg-stone-900/60 border border-stone-800 flex items-center justify-between">
+          <button onclick="selectModule(2)" class="inline-flex items-center gap-1.5 bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg transition-all">
+            ← Voltar ao Módulo 2
+          </button>
+          <button onclick="selectModule(4)" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg transition-all">
+            Ir para Módulo 4: Bônus Salgados →
+          </button>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- CONTEÚDO MÓDULO 4: BÔNUS SALGADOS & PANIFICAÇÃO (4 ITENS) -->
+      <!-- ============================================== -->
+      <section id="content-mod-4" class="module-content-pane hidden fade-in-content">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 pb-4 border-b border-stone-800 gap-3">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 font-bold text-xs uppercase px-3 py-1 rounded-full mb-2 border border-emerald-500/20">
+              <span>🥐</span> Bônus Exclusivo VIP
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Módulo 4: Salgados Comerciais & Panificação</h3>
+            <p class="text-sm text-stone-400 mt-1">Apostilas completas de salgados assados de vitrine, massa de empadão e segredos da panificação clássica</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 font-extrabold text-xs sm:text-sm px-3.5 py-1.5 rounded-full">
+              ✓ 4 Materiais Liberados
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Item 15: Curso de Salgados Top 10 -->
+          <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="carrossel_salgados_panificacao.jpg" alt="Curso de Salgados Top 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Salgados Campeões</span>
@@ -306,7 +740,7 @@ def generate_completo_html():
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
-                <img src="empadao_capa.jpg" alt="Empadão de Confeitaria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                <img src="carrossel_salgados_panificacao.jpg" alt="Empadão Tradicional e Lucrativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-yellow-400">Massa Podre que Derrete</span>
@@ -329,7 +763,7 @@ def generate_completo_html():
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
-                <img src="o-livro-de-ouro-da-panificacao_capa.jpg" alt="Livro de Ouro da Panificação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                <img src="banner_confeitaria.jpg" alt="O Livro de Ouro da Panificação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-orange-400">Enciclopédia Completa</span>
@@ -352,7 +786,7 @@ def generate_completo_html():
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
               <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
-                <img src="salgados-assados_capa.jpg" alt="Salgados Assados" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                <img src="carrossel_salgados_panificacao.jpg" alt="Salgados Assados Práticos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Assados de Sucesso</span>
@@ -762,9 +1196,8 @@ def generate_principal_html():
           <!-- Item 2: Manual do iFood Lucrativo -->
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500/20 via-red-600/10 to-red-950/40 border border-red-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(239,68,68,0.25)] relative group overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🛵</span>
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="capa_curso_confeitaria_completo.jpg" alt="Manual do iFood Lucrativo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-[#EA1D2C]">Guia Oficial iFood</span>
@@ -786,9 +1219,8 @@ def generate_principal_html():
           <!-- Item 3: Cookies para Delivery -->
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 via-emerald-600/10 to-emerald-950/40 border border-emerald-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(16,185,129,0.25)] relative group overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">📦</span>
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="v1_frame_06.jpg" alt="Cookies para Delivery" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Operação & Embalagem</span>
@@ -810,9 +1242,8 @@ def generate_principal_html():
           <!-- Item 4: Masterclass Cookies -->
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500/20 via-rose-600/10 to-rose-950/40 border border-rose-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(244,63,94,0.25)] relative group overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">⭐</span>
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="v2_frame_05.jpg" alt="Masterclass Cookies" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Conteúdo Avançado</span>
@@ -834,9 +1265,8 @@ def generate_principal_html():
           <!-- Item 5: Cookies Tradicionais -->
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-600/20 via-orange-600/10 to-amber-950/40 border border-amber-600/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(245,158,11,0.25)] relative group overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🧁</span>
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="v1_frame_08.jpg" alt="Guia Fotografia Gastronômica" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-orange-400">Receitas Clássicas</span>
@@ -858,9 +1288,8 @@ def generate_principal_html():
           <!-- Item 6: Guia de Precificação Profissional -->
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/20 via-blue-600/10 to-blue-950/40 border border-blue-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(59,130,246,0.25)] relative group overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">💰</span>
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="capa_cookies_natal_basico.jpg" alt="Planilha de Precificação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-blue-400">Gestão & Finanças</span>
@@ -882,9 +1311,8 @@ def generate_principal_html():
           <!-- Item 7: Planilha de Precificação -->
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-teal-950/40 border border-teal-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(20,184,166,0.25)] relative group overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">📊</span>
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="capa_natal_mobile.jpg" alt="Bônus Cookies de Natal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-teal-400">Ferramenta Automática</span>
@@ -906,9 +1334,8 @@ def generate_principal_html():
           <!-- Item 8: Estratégias Avançadas iFood -->
           <div class="bg-[#191211] rounded-2xl p-5 sm:p-6 border border-stone-800/80 shadow-lg card-hover flex flex-col justify-between">
             <div class="flex items-start gap-4 mb-4">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 via-purple-600/10 to-purple-950/40 border border-purple-500/40 flex items-center justify-center shrink-0 shadow-[0_0_20px_rgba(168,85,247,0.25)] relative group overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span class="text-4xl filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] transform group-hover:scale-110 transition-transform duration-300">🚀</span>
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-stone-800 shrink-0 shadow-md relative group">
+                <img src="curso_confeitaria_selo.jpg" alt="Certificado de Conclusão" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
               </div>
               <div class="flex-1 min-w-0">
                 <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Apostila Completa Delivery</span>
