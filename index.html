@@ -248,45 +248,63 @@ body { font-family: 'Montserrat', sans-serif; }
   }
 </style>
 <style id="guarantee-box-styles">
-  /* Redução matemática exata de 5% na seção de Garantia Incondicional */
+  /* Garantia Incondicional: mesmo layout horizontal em mobile e desktop com redução de 5% */
   .guarantee-container {
-    max-width: 638.4px !important; /* 95% de 672px (max-w-2xl) */
+    max-width: 638.4px !important;
   }
   .guarantee-box {
-    padding: 22.8px !important; /* 95% de 24px (p-6) */
-    gap: 22.8px !important; /* 95% de 24px (gap-6) */
-    border-radius: 7.6px !important; /* 95% de 8px (rounded-lg) */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    padding: 18px 16px !important;
+    gap: 14px !important;
+    border-radius: 12px !important;
+  }
+  .guarantee-icon-wrapper {
+    padding: 10px !important;
+    flex-shrink: 0 !important;
+  }
+  .guarantee-icon {
+    width: 36px !important;
+    height: 36px !important;
+    flex-shrink: 0 !important;
+  }
+  .guarantee-title {
+    font-size: clamp(17px, 4.4vw, 21.6px) !important; /* 95% de 22.8px */
+    line-height: 1.22 !important;
+    text-align: left !important;
+  }
+  .guarantee-text {
+    font-size: clamp(12.5px, 3.4vw, 14.4px) !important; /* 95% de 15.2px */
+    max-width: 520px !important;
+    margin-top: 8px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    line-height: 1.45 !important;
+    text-align: left !important;
   }
   @media (min-width: 640px) {
     .guarantee-box {
-      padding: 30.4px !important; /* 95% de 32px (sm:p-8) */
+      padding: 28px 30px !important;
+      gap: 24px !important;
+      border-radius: 14px !important;
     }
-  }
-  .guarantee-icon-wrapper {
-    padding: 11.4px !important; /* 95% de 12px (p-3) */
-  }
-  .guarantee-icon {
-    width: 38px !important; /* 95% de 40px (w-10) */
-    height: 38px !important; /* 95% de 40px (h-10) */
-  }
-  .guarantee-title {
-    font-size: 22.8px !important; /* 95% de 24px (text-2xl) */
-    line-height: 1.25 !important;
-  }
-  @media (min-width: 640px) {
+    .guarantee-icon-wrapper {
+      padding: 12px !important;
+    }
+    .guarantee-icon {
+      width: 40px !important;
+      height: 40px !important;
+    }
     .guarantee-title {
-      font-size: 28.5px !important; /* 95% de 30px (sm:text-3xl) */
+      font-size: 28.5px !important;
+      line-height: 1.25 !important;
     }
-  }
-  .guarantee-text {
-    font-size: 15.2px !important; /* 95% de 16px (text-base) */
-    max-width: 547.2px !important; /* 95% de 576px (max-w-xl) */
-    margin-top: 15.2px !important; /* 95% de 16px (mt-4) */
-    line-height: 1.5 !important;
-  }
-  @media (min-width: 640px) {
     .guarantee-text {
-      font-size: 17.1px !important; /* 95% de 18px (sm:text-lg) */
+      font-size: 16.2px !important;
+      margin-top: 12px !important;
+      line-height: 1.55 !important;
     }
   }
 </style>
@@ -1330,7 +1348,7 @@ src='https://www.facebook.com/tr?id=1046938031756007&ev=PageView&noscript=1'
 </svg>
   </div>
 </div>
-</section></div><!--/$--><!--$--><div class="fade-in-section "><section class="pb-12 sm:pb-24 bg-background"><div class="container mx-auto max-w-2xl px-4 guarantee-container"><div class="guarantee-box bg-green-50 border-2 border-dashed border-green-500 rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-center sm:text-left"><div class="guarantee-icon-wrapper bg-green-500/20 p-3 rounded-full shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="guarantee-icon lucide lucide-shield-check h-10 w-10 text-green-600 flex-shrink-0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></div><div class="font-montserrat"><h3 class="guarantee-title text-2xl sm:text-3xl font-bold text-secondary">30 Dias de Garantia Incondicional</h3><p class="guarantee-text mt-4 text-foreground/80 max-w-xl mx-auto text-base sm:text-lg">Você tem 30 dias para explorar o conteúdo do curso, a comunidade e os bônus. Se por qualquer motivo sentir que não é para você, basta nos enviar um e-mail e nós devolveremos 100% do valor sem burocracia. Sua satisfação é nossa prioridade.</p></div></div></div></section></div><!--/$--><!--$--><div class="fade-in-section "><section class="py-12 sm:py-24 bg-[#FFF7F5]"><div class="container mx-auto flex flex-col items-center gap-12 px-4"><div class="text-center max-w-3xl"><p class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium font-headline">Sobre a Expert</p><h2 class="text-3xl sm:text-5xl font-bold font-headline mt-4 text-primary">Conheça <b>Juliana Fiorentelli</b></h2><p class="mt-4 text-lg sm:text-xl text-foreground/80">Juliana Fiorentelli transformou sua <b>paixão pela confeitaria</b> em um negócio próspero e na missão de capacitar outras pessoas. Ela acredita que os cookies são mais que um artesanato, são um caminho para a <b>independência e aumento da autoestima</b>.</p></div><div class="flex justify-center mt-8"><img alt="Juliana Fiorentelli" loading="lazy" decoding="async" width="320" height="320" decoding="async" class="rounded-full shadow-2xl object-cover w-72 h-72 sm:w-80 sm:h-80 border-4 border-[#E2BC9B]" src="juliana_fiorentelli.jpg"/></div></div></section></div><!--/$--></main><footer class="bg-[#BC523F] text-white py-16 px-4 sm:px-6"><div class="container mx-auto text-center flex flex-col items-center"><h3 class="text-3xl sm:text-4xl font-bold font-headline max-w-2xl">Pronta para Começar sua <b>Jornada Doce?</b></h3><p class="mt-6 text-lg sm:text-xl max-w-2xl opacity-90 leading-relaxed">Não perca a chance de transformar simples ingredientes em um <b>negócio lucrativo e prazeroso</b>. As vagas encerram em breve!</p><a href="#inscricao" class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-black/5 mt-10 h-16 px-12 text-xl font-bold bg-[#004D3C] hover:bg-[#003d30] text-white rounded-md shadow-xl transition-all hover:scale-105">QUERO ME INSCREVER</a><div class="mt-10 bg-white p-5 sm:p-7 rounded-2xl shadow-2xl border border-white/30 max-w-lg w-full flex flex-col items-center">
+</section></div><!--/$--><!--$--><div class="fade-in-section "><section class="pb-12 sm:pb-24 bg-background"><div class="container mx-auto max-w-2xl px-4 guarantee-container"><div class="guarantee-box bg-green-50 border-2 border-dashed border-green-500 rounded-lg p-6 sm:p-8 flex flex-row items-center justify-start gap-4 sm:gap-6 text-left"><div class="guarantee-icon-wrapper bg-green-500/20 p-3 rounded-full shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="guarantee-icon lucide lucide-shield-check h-10 w-10 text-green-600 flex-shrink-0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></div><div class="font-montserrat"><h3 class="guarantee-title text-2xl sm:text-3xl font-bold text-secondary">30 Dias de Garantia Incondicional</h3><p class="guarantee-text mt-4 text-foreground/80 max-w-xl text-base sm:text-lg">Você tem 30 dias para explorar o conteúdo do curso, a comunidade e os bônus. Se por qualquer motivo sentir que não é para você, basta nos enviar um e-mail e nós devolveremos 100% do valor sem burocracia. Sua satisfação é nossa prioridade.</p></div></div></div></section></div><!--/$--><!--$--><div class="fade-in-section "><section class="py-12 sm:py-24 bg-[#FFF7F5]"><div class="container mx-auto flex flex-col items-center gap-12 px-4"><div class="text-center max-w-3xl"><p class="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium font-headline">Sobre a Expert</p><h2 class="text-3xl sm:text-5xl font-bold font-headline mt-4 text-primary">Conheça <b>Juliana Fiorentelli</b></h2><p class="mt-4 text-lg sm:text-xl text-foreground/80">Juliana Fiorentelli transformou sua <b>paixão pela confeitaria</b> em um negócio próspero e na missão de capacitar outras pessoas. Ela acredita que os cookies são mais que um artesanato, são um caminho para a <b>independência e aumento da autoestima</b>.</p></div><div class="flex justify-center mt-8"><img alt="Juliana Fiorentelli" loading="lazy" decoding="async" width="320" height="320" decoding="async" class="rounded-full shadow-2xl object-cover w-72 h-72 sm:w-80 sm:h-80 border-4 border-[#E2BC9B]" src="juliana_fiorentelli.jpg"/></div></div></section></div><!--/$--></main><footer class="bg-[#BC523F] text-white py-16 px-4 sm:px-6"><div class="container mx-auto text-center flex flex-col items-center"><h3 class="text-3xl sm:text-4xl font-bold font-headline max-w-2xl">Pronta para Começar sua <b>Jornada Doce?</b></h3><p class="mt-6 text-lg sm:text-xl max-w-2xl opacity-90 leading-relaxed">Não perca a chance de transformar simples ingredientes em um <b>negócio lucrativo e prazeroso</b>. As vagas encerram em breve!</p><a href="#inscricao" class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-black/5 mt-10 h-16 px-12 text-xl font-bold bg-[#004D3C] hover:bg-[#003d30] text-white rounded-md shadow-xl transition-all hover:scale-105">QUERO ME INSCREVER</a><div class="mt-10 bg-white p-5 sm:p-7 rounded-2xl shadow-2xl border border-white/30 max-w-lg w-full flex flex-col items-center">
   <img alt="Formas de Pagamento e Selos de Segurança" loading="lazy" width="475" height="271" decoding="async" class="w-full h-auto max-w-[420px] rounded-lg object-contain" src="formas_de_pagamento_seguranca.jpg"/>
 </div><div class="mt-16 pt-8 border-t border-white/10 w-full max-w-4xl"><div class="h-6 w-64 mx-auto bg-white/5 animate-pulse rounded"></div><div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-4 text-sm opacity-70"><span class="hover:opacity-100 cursor-pointer transition-opacity">Compra 100% Segura</span><span class="hidden sm:inline">|</span><span class="hover:opacity-100 cursor-pointer transition-opacity">Política de Privacidade</span><span class="hidden sm:inline">|</span><span class="hover:opacity-100 cursor-pointer transition-opacity">Termos de Uso</span></div></div></div></footer></div><!--$--><!--/$--><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div>
 
