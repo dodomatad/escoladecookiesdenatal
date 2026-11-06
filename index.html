@@ -1101,6 +1101,26 @@ src='https://www.facebook.com/tr?id=1046938031756007&ev=PageView&noscript=1'
     box-sizing: border-box !important;
     cursor: pointer !important;
   }
+  /* Ajuste otimizado do botão na versão mobile para linha única e proporção perfeita */
+  @media (max-width: 640px) {
+    .pricing-card {
+      padding: 30px 18px 24px !important;
+    }
+    .pricing-cta-btn {
+      font-size: clamp(12.5px, 3.6vw, 13.8px) !important;
+      min-height: 52px !important;
+      padding: 14px 10px !important;
+      letter-spacing: 0.02em !important;
+      white-space: nowrap !important;
+      border-radius: 14px !important;
+    }
+    #btn-plano-basico {
+      font-size: clamp(12.0px, 3.4vw, 13.5px) !important;
+      white-space: nowrap !important;
+      letter-spacing: 0.015em !important;
+      padding: 14px 8px !important;
+    }
+  }
   @media (min-width: 640px) {
     .pricing-cta-btn {
       font-size: 15px !important;
