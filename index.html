@@ -1752,25 +1752,31 @@ document.addEventListener('click', function(e) {
   }
   .offer-modal-close {
     position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 32px;
-    height: 32px;
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.32);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s;
+    z-index: 100;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s ease-in-out;
   }
-  .offer-modal-close:hover {
-    background: rgba(255, 255, 255, 0.45);
-    transform: scale(1.08);
+  .offer-modal-close:hover, .offer-modal-close:active {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: #ffffff;
+    transform: scale(1.1);
   }
   .offer-modal-title {
     font-size: 23px;
@@ -1949,7 +1955,7 @@ document.addEventListener('click', function(e) {
     
     <!-- Top Header Paleta da Marca (#BC523F) -->
     <div class="offer-modal-header">
-      <button class="offer-modal-close" onclick="closeOfferModal()" aria-label="Fechar">&times;</button>
+      <button type="button" class="offer-modal-close" id="offer-modal-close-btn" onclick="closeOfferModal(event)" aria-label="Fechar">&times;</button>
       <span class="offer-badge-pill">🔥 OFERTA EXCLUSIVA DESBLOQUEADA</span>
       <h2 id="offer-modal-heading" class="offer-modal-title">
         Leve o Plano Completo por apenas R$ 19,90
@@ -2071,19 +2077,34 @@ document.addEventListener('click', function(e) {
         // Prepara feedback touch
       }, { passive: true });
     }
+
+    var closeBtn = document.getElementById('offer-modal-close-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeOfferModal, true);
+      closeBtn.addEventListener('touchend', function(e) {
+        closeOfferModal(e);
+      }, { passive: false });
+    }
   });
 
-  function closeOfferModal() {
+  function closeOfferModal(e) {
+    if (e) {
+      if (typeof e.preventDefault === 'function') e.preventDefault();
+      if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      if (typeof e.stopImmediatePropagation === 'function') e.stopImmediatePropagation();
+    }
     var modal = document.getElementById('offer-modal');
     if (modal) {
       modal.classList.remove('active');
+      modal.style.display = 'none';
+      modal.style.opacity = '0';
       document.body.style.overflow = '';
     }
   }
 
   function handleOfferBackdropClick(e) {
-    if (e.target.id === 'offer-modal') {
-      closeOfferModal();
+    if (e && e.target && e.target.id === 'offer-modal') {
+      closeOfferModal(e);
     }
   }
 
