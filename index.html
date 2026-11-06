@@ -217,21 +217,22 @@ body { font-family: 'Montserrat', sans-serif; }
   }
 </style>
 <style id="mentora-cards-styles">
-  /* Cards da Mentora: Fundo branco com detalhes vermelhos e reducao de mais 5% no tamanho */
+  /* Cards da Mentora: Fundo branco garantido com detalhes vermelhos e reducao de mais 5% no tamanho */
   .mentora-cards-container {
-    max-width: 419.7px !important; /* 95% de 441.8px */
-    gap: 11.6px !important; /* 95% de 12.2px */
+    max-width: 419.7px !important;
+    gap: 11.6px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
   .mentora-feature-card {
+    background-color: #ffffff !important;
     background: #ffffff !important;
-    border: 1.5px solid #FCA5A5 !important; /* Detalhe em borda vermelha */
-    border-left: 4px solid #CA2F2F !important; /* Destaque elegante vermelho na lateral */
-    box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
-    padding: 11.6px 13.3px !important; /* 95% de 12.2px e 14px */
-    gap: 11.6px !important; /* 95% de 12.2px */
-    border-radius: 11.6px !important; /* 95% de 12.2px */
+    border: 1.5px solid #FCA5A5 !important;
+    border-left: 5px solid #CA2F2F !important;
+    box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12), 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+    padding: 11.6px 13.3px !important;
+    gap: 11.6px !important;
+    border-radius: 12px !important;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
   }
   .mentora-feature-card:hover {
@@ -241,27 +242,28 @@ body { font-family: 'Montserrat', sans-serif; }
     box-shadow: 0 8px 24px rgba(202, 47, 47, 0.22) !important;
   }
   .mentora-feature-emoji {
-    font-size: 21.8px !important; /* 95% de 23.0px */
+    font-size: 21.8px !important;
     flex-shrink: 0 !important;
+    line-height: 1 !important;
   }
   @media (min-width: 640px) {
     .mentora-feature-emoji {
-      font-size: 26.2px !important; /* 95% de 27.6px */
+      font-size: 26.2px !important;
     }
   }
   .mentora-feature-text {
-    font-size: 11.7px !important; /* 95% de 12.3px */
-    line-height: 1.38 !important;
-    color: #1F2937 !important; /* Legibilidade perfeita no fundo branco */
+    font-size: 11.7px !important;
+    line-height: 1.4 !important;
+    color: #1F2937 !important;
   }
   .mentora-feature-text b,
   .mentora-feature-text strong {
-    color: #CA2F2F !important; /* Detalhe e enfase em vermelho vibrante */
+    color: #CA2F2F !important;
     font-weight: 800 !important;
   }
   @media (min-width: 640px) {
     .mentora-feature-text {
-      font-size: 13.1px !important; /* 95% de 13.8px */
+      font-size: 13.1px !important;
     }
   }
 </style>
@@ -943,29 +945,29 @@ src='https://www.facebook.com/tr?id=1046938031756007&ev=PageView&noscript=1'
 </div>
 
 <div class="flex flex-col gap-4 text-left max-w-xl w-full mb-12 mentora-cards-container">
-  <div class="mentora-feature-card flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
+  <div class="mentora-feature-card flex items-center gap-4 rounded-2xl transition-colors" style="background-color: #ffffff !important; border: 1.5px solid #FCA5A5 !important; border-left: 5px solid #CA2F2F !important; box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12);">
     <span class="mentora-feature-emoji text-3xl sm:text-4xl shrink-0">🍪</span>
-    <p class="mentora-feature-text text-white text-base sm:text-lg leading-snug">Descubra novos sabores e combinações gourmet para <b>criar produtos irresistíveis e conquistar clientes</b>.</p>
+    <p class="mentora-feature-text leading-snug" style="color: #1F2937 !important;">Descubra novos sabores e combinações gourmet para <b style="color: #CA2F2F !important; font-weight: 800 !important;">criar produtos irresistíveis e conquistar clientes</b>.</p>
   </div>
-  <div class="mentora-feature-card flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
+  <div class="mentora-feature-card flex items-center gap-4 rounded-2xl transition-colors" style="background-color: #ffffff !important; border: 1.5px solid #FCA5A5 !important; border-left: 5px solid #CA2F2F !important; box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12);">
     <span class="mentora-feature-emoji text-3xl sm:text-4xl shrink-0">✅</span>
-    <p class="mentora-feature-text text-white text-base sm:text-lg leading-snug">Aprenda técnicas de preparo e finalização para <b>produzir cookies com massas perfeitas, recheios cremosos e coberturas incríveis</b>.</p>
+    <p class="mentora-feature-text leading-snug" style="color: #1F2937 !important;">Aprenda técnicas de preparo e finalização para <b style="color: #CA2F2F !important; font-weight: 800 !important;">produzir cookies com massas perfeitas, recheios cremosos e coberturas incríveis</b>.</p>
   </div>
-  <div class="mentora-feature-card flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
+  <div class="mentora-feature-card flex items-center gap-4 rounded-2xl transition-colors" style="background-color: #ffffff !important; border: 1.5px solid #FCA5A5 !important; border-left: 5px solid #CA2F2F !important; box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12);">
     <span class="mentora-feature-emoji text-3xl sm:text-4xl shrink-0">📋</span>
-    <p class="mentora-feature-text text-white text-base sm:text-lg leading-snug">Monte cardápios estratégicos e kits promocionais para <b>aproveitar datas especiais e aumentar o valor das suas vendas</b>.</p>
+    <p class="mentora-feature-text leading-snug" style="color: #1F2937 !important;">Monte cardápios estratégicos e kits promocionais para <b style="color: #CA2F2F !important; font-weight: 800 !important;">aproveitar datas especiais e aumentar o valor das suas vendas</b>.</p>
   </div>
-  <div class="mentora-feature-card flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
+  <div class="mentora-feature-card flex items-center gap-4 rounded-2xl transition-colors" style="background-color: #ffffff !important; border: 1.5px solid #FCA5A5 !important; border-left: 5px solid #CA2F2F !important; box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12);">
     <span class="mentora-feature-emoji text-3xl sm:text-4xl shrink-0">💰</span>
-    <p class="mentora-feature-text text-white text-base sm:text-lg leading-snug">Saiba calcular seus custos e <b>definir preços lucrativos sem vender no prejuízo</b>.</p>
+    <p class="mentora-feature-text leading-snug" style="color: #1F2937 !important;">Saiba calcular seus custos e <b style="color: #CA2F2F !important; font-weight: 800 !important;">definir preços lucrativos sem vender no prejuízo</b>.</p>
   </div>
-  <div class="mentora-feature-card flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
+  <div class="mentora-feature-card flex items-center gap-4 rounded-2xl transition-colors" style="background-color: #ffffff !important; border: 1.5px solid #FCA5A5 !important; border-left: 5px solid #CA2F2F !important; box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12);">
     <span class="mentora-feature-emoji text-3xl sm:text-4xl shrink-0">🚀</span>
-    <p class="mentora-feature-text text-white text-base sm:text-lg leading-snug">Tenha estratégias para divulgar seus produtos e <b>conquistar clientes pelo WhatsApp, Instagram e iFood</b>.</p>
+    <p class="mentora-feature-text leading-snug" style="color: #1F2937 !important;">Tenha estratégias para divulgar seus produtos e <b style="color: #CA2F2F !important; font-weight: 800 !important;">conquistar clientes pelo WhatsApp, Instagram e iFood</b>.</p>
   </div>
-  <div class="mentora-feature-card flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10 hover:bg-white/20 transition-colors">
+  <div class="mentora-feature-card flex items-center gap-4 rounded-2xl transition-colors" style="background-color: #ffffff !important; border: 1.5px solid #FCA5A5 !important; border-left: 5px solid #CA2F2F !important; box-shadow: 0 4px 16px rgba(202, 47, 47, 0.12);">
     <span class="mentora-feature-emoji text-3xl sm:text-4xl shrink-0">🎁</span>
-    <p class="mentora-feature-text text-white text-base sm:text-lg leading-snug">Prepare embalagens e apresentações especiais para <b>valorizar seus cookies e encantar seus compradores</b>.</p>
+    <p class="mentora-feature-text leading-snug" style="color: #1F2937 !important;">Prepare embalagens e apresentações especiais para <b style="color: #CA2F2F !important; font-weight: 800 !important;">valorizar seus cookies e encantar seus compradores</b>.</p>
   </div>
 </div><div class="w-full max-w-md px-4"><a href="#inscricao" class="mentora-cta-btn"><span class="text-xl sm:text-2xl shrink-0">🔓</span> <span>QUERO DESBLOQUEAR MINHA MENTORA</span></a><p class="mt-4 text-white/70 text-sm flex items-center justify-center gap-2"><span>🔐</span> Exclusiva para alunas da Escola de Confeitaria</p></div></div></section></div><!--$--><div class="fade-in-section "><section class="py-12 sm:py-24 bg-[#FFF7F5]"><div class="container mx-auto text-center"><style id="depoimentos-header-styles">
   /* Redução matemática exata de 5% no texto dos Depoimentos */
